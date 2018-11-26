@@ -37,36 +37,39 @@
                                 <rect key="frame" x="37" y="184" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plusSign" translatesAutoresizingMaskIntoConstraints="NO" id="Ef7-WB-Qu0" customClass="ImagePhotoLocation" customModule="Instagrid" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="157" width="270" height="127.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-Ly-aCz" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="127.5" height="127.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="plusSign"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="1"/>
+                                                <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plusSign" translatesAutoresizingMaskIntoConstraints="NO" id="qjC-Ou-LJ4" customClass="ImagePhotoLocation" customModule="Instagrid" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="21" width="128" height="128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhE-oD-XG4" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="153" y="8" width="127.5" height="127.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="plusSign"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
+                                                <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plusSign" translatesAutoresizingMaskIntoConstraints="NO" id="HoH-Og-hmP" customClass="ImagePhotoLocation" customModule="Instagrid" customModuleProvider="target">
-                                        <rect key="frame" x="157" y="21" width="128" height="128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuX-8G-5br" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="143" width="270" height="127.5"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="plusSign"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="28"/>
+                                                <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                    </imageView>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -122,18 +125,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="two photos down" translatesAutoresizingMaskIntoConstraints="NO" id="96B-2M-LQQ">
-                                <rect key="frame" x="43" y="567" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="two photos up" translatesAutoresizingMaskIntoConstraints="NO" id="HZg-Yk-1J5">
-                                <rect key="frame" x="147" y="567" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="four photos layout" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-kz-kn4">
-                                <rect key="frame" x="257" y="567" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL">
+                                <rect key="frame" x="133" y="574" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="photo check" backgroundImage="two photos up"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Mn-GOv">
+                                <rect key="frame" x="259" y="574" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="photo check" backgroundImage="four photos layout"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G65-KZ-B5c">
+                                <rect key="frame" x="20" y="574" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="photo check" backgroundImage="two photos down"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.71360510590000004" green="0.84258151049999996" blue="0.90132403370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -147,6 +153,7 @@
     <resources>
         <image name="arrow" width="19" height="20"/>
         <image name="four photos layout" width="80" height="80"/>
+        <image name="photo check" width="80" height="80"/>
         <image name="plusSign" width="50" height="50"/>
         <image name="trashcan" width="80" height="70"/>
         <image name="trashcanLid" width="80" height="20"/>
