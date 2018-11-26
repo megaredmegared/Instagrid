@@ -8,13 +8,12 @@
 
 import UIKit
 
-// Improve the UI toolkit of Interface Builder
+/// Improve the UI toolkit of Interface Builder
 
-// Make change appear at design time
+/// Make change appear at design time
 
 @IBDesignable
 class DesignableView: UIView {
-
 }
 
 @IBDesignable
@@ -23,30 +22,31 @@ class DesignableButton: UIButton {
 
 @IBDesignable
 class DesignableLabel: UILabel {
-
 }
 
 @IBDesignable
 class DesignableImageView: UIImageView {
-    @IBInspectable var Rotation: Double = 0 {
-        didSet {
-            rotateLabel(labelRotation: Rotation)
-            self.layoutIfNeeded()
-        }
-    }
-    
-    //*********** verify is divide correct ? *****************
-    
-    func rotateLabel(labelRotation: Double)  {
-        self.transform = CGAffineTransform(rotationAngle: CGFloat(labelRotation * Double.pi / 180))
-    }
-}
 
-// Add UI Options Tabs for Interface Builder
+}
+var doudou = ImagePhotoLocation()
+
+/// Add UI Options Tabs for Interface Builder
 
 extension UIView {
 
-    
+    @IBInspectable
+    var rotation: Double {
+        get {
+            return self.rotation
+        }
+        set {
+            rotateView(degree: newValue)
+        }
+    }
+    /// Convert radian in degree
+    func rotateView(degree: Double)  {
+        self.transform = CGAffineTransform(rotationAngle: CGFloat(degree * Double.pi / 180))
+    }
     
     @IBInspectable
     var cornerRadius: CGFloat {

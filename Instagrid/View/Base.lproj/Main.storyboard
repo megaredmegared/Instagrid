@@ -63,7 +63,7 @@
                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="18"/>
+                                                <real key="value" value="28"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
@@ -91,35 +91,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="four photos layout" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-kz-kn4">
-                                <rect key="frame" x="257" y="561" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="three photos layout" translatesAutoresizingMaskIntoConstraints="NO" id="S9i-hy-OHv">
-                                <rect key="frame" x="153" y="561" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="three photos layout" translatesAutoresizingMaskIntoConstraints="NO" id="G0I-38-dz6" customClass="DesignableImageView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="44" y="561" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="Rotation">
-                                        <real key="value" value="180"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="8I0-bY-pNa">
                                 <rect key="frame" x="173" y="106" width="19" height="20"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="rLi-yO-yDt" customClass="DesignableImageView" customModule="Instagrid" customModuleProvider="target">
-                                <rect key="frame" x="173" y="531" width="19" height="20"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="Rotation">
-                                        <real key="value" value="180"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="trashcan" translatesAutoresizingMaskIntoConstraints="NO" id="Iki-fZ-TpE">
                                 <rect key="frame" x="168" y="494" width="28" height="50"/>
@@ -139,6 +113,27 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="rLi-yO-yDt" customClass="DesignableImageView" customModule="Instagrid" customModuleProvider="target">
+                                <rect key="frame" x="176" y="531" width="19" height="20"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="Rotation">
+                                        <real key="value" value="180"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="two photos down" translatesAutoresizingMaskIntoConstraints="NO" id="96B-2M-LQQ">
+                                <rect key="frame" x="43" y="567" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="two photos up" translatesAutoresizingMaskIntoConstraints="NO" id="HZg-Yk-1J5">
+                                <rect key="frame" x="147" y="567" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="four photos layout" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-kz-kn4">
+                                <rect key="frame" x="257" y="567" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.71360510590000004" green="0.84258151049999996" blue="0.90132403370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -153,8 +148,9 @@
         <image name="arrow" width="19" height="20"/>
         <image name="four photos layout" width="80" height="80"/>
         <image name="plusSign" width="50" height="50"/>
-        <image name="three photos layout" width="80" height="80"/>
         <image name="trashcan" width="80" height="70"/>
         <image name="trashcanLid" width="80" height="20"/>
+        <image name="two photos down" width="80" height="80"/>
+        <image name="two photos up" width="80" height="80"/>
     </resources>
 </document>

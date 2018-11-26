@@ -13,9 +13,9 @@
 		4D33B62921A5650400FD41A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B62721A5650400FD41A6 /* LaunchScreen.storyboard */; };
 		4D33B63121A577EA00FD41A6 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B63021A577EA00FD41A6 /* ThirstySoftRegular.otf */; };
 		4D33B63321A577F700FD41A6 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B63221A577F700FD41A6 /* Delm-Medium.otf */; };
-		4D33B63521A5813A00FD41A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B63421A5813A00FD41A6 /* Assets.xcassets */; };
 		4D86F99821A6BF43004BDF50 /* ExtentionViewOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D86F99721A6BF43004BDF50 /* ExtentionViewOption.swift */; };
 		4D86F99A21A6CFCD004BDF50 /* ImagePhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D86F99921A6CFCD004BDF50 /* ImagePhotoLocation.swift */; };
+		4DC0AA3321AC31F7000D9B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC0AA3221AC31F7000D9B76 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		4D33B62A21A5650400FD41A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D33B63021A577EA00FD41A6 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		4D33B63221A577F700FD41A6 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		4D33B63421A5813A00FD41A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D86F99721A6BF43004BDF50 /* ExtentionViewOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionViewOption.swift; sourceTree = "<group>"; };
 		4D86F99921A6CFCD004BDF50 /* ImagePhotoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePhotoLocation.swift; sourceTree = "<group>"; };
+		4DC0AA3221AC31F7000D9B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				4D33B61E21A5650300FD41A6 /* AppDelegate.swift */,
+				4DC0AA3221AC31F7000D9B76 /* Assets.xcassets */,
 				4D33B62721A5650400FD41A6 /* LaunchScreen.storyboard */,
-				4D33B63421A5813A00FD41A6 /* Assets.xcassets */,
 				4D33B63021A577EA00FD41A6 /* ThirstySoftRegular.otf */,
 				4D33B63221A577F700FD41A6 /* Delm-Medium.otf */,
 			);
@@ -170,7 +170,7 @@
 				4D33B63321A577F700FD41A6 /* Delm-Medium.otf in Resources */,
 				4D33B63121A577EA00FD41A6 /* ThirstySoftRegular.otf in Resources */,
 				4D33B62421A5650300FD41A6 /* Main.storyboard in Resources */,
-				4D33B63521A5813A00FD41A6 /* Assets.xcassets in Resources */,
+				4DC0AA3321AC31F7000D9B76 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

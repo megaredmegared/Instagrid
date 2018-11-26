@@ -8,9 +8,10 @@
 
 import UIKit
 
-// Set the images locations all with the same UI properties
+/// Set the images locations all with the same UI properties
 
 class ImagePhotoLocation: DesignableImageView {
+    // FIXME: try a shorter code for overriding ?
     override var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -20,3 +21,5 @@ class ImagePhotoLocation: DesignableImageView {
         }
     }
 }
+
+
