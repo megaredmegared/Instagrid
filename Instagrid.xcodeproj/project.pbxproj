@@ -43,13 +43,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D1BE74321A800EE00B17D4F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		4D33B61221A5650300FD41A6 = {
 			isa = PBXGroup;
 			children = (
@@ -69,7 +62,6 @@
 		4D33B61D21A5650300FD41A6 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				4D1BE74321A800EE00B17D4F /* Model */,
 				4D83C65E21A5928700865E6E /* Supporting Files */,
 				4D83C65D21A5927800865E6E /* Controller */,
 				4D83C65C21A5927000865E6E /* View */,
