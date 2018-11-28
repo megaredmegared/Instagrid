@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,11 +23,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-Uw-jTQ">
-                                <rect key="frame" x="268.5" y="10" width="130" height="39"/>
+                                <rect key="frame" x="219" y="10" width="130" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="AaR-Bn-XUk"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="EWT-os-XZU"/>
@@ -37,17 +37,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="rub-zY-JYz">
-                                <rect key="frame" x="10" y="59" width="507" height="306"/>
+                                <rect key="frame" x="3" y="59" width="502" height="251"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oIX-1U-6Sd">
-                                        <rect key="frame" x="0.0" y="126" width="171" height="54"/>
+                                        <rect key="frame" x="0.0" y="97" width="196" height="57"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="254" insetsLayoutMarginsFromSafeArea="NO" image="top arrow" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-Sg-CBY">
-                                                <rect key="frame" x="0.0" y="0.0" width="171" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="57"/>
                                                 <variation key="heightClass=compact" image="left arrow"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I9-cX-n4C">
-                                                <rect key="frame" x="0.0" y="22.5" width="171" height="0.0"/>
+                                                <rect key="frame" x="22.5" y="0.0" width="171" height="57"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="171" id="oWZ-rd-1nR"/>
                                                 </constraints>
@@ -56,26 +56,103 @@
                                                 <nil key="highlightedColor"/>
                                                 <variation key="heightClass=compact" hidden="YES"/>
                                             </label>
-                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-MA-vxx">
-                                                <rect key="frame" x="0.0" y="25" width="171" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="171" id="GVZ-3F-KUV"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="heightClass=compact" hidden="NO"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6kb-1B-jGZ">
+                                                <rect key="frame" x="25" y="0.0" width="171" height="57"/>
+                                                <subviews>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Swipe left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5X-Up-q0X">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="29"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="171" id="SVZ-44-U5n"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact" hidden="NO"/>
+                                                    </label>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-MA-vxx">
+                                                        <rect key="frame" x="0.0" y="28" width="171" height="29"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="171" id="GVZ-3F-KUV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact" hidden="NO"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QD9-Xq-nqO">
-                                        <rect key="frame" x="181" y="10" width="286" height="286"/>
+                                        <rect key="frame" x="206" y="10" width="231" height="231"/>
                                         <subviews>
                                             <view contentMode="scaleAspectFit" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-vk-aPT" customClass="DesignableView" customModule="Instagrid" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="231" height="231"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rSO-AB-4Ig">
+                                                        <rect key="frame" x="10" y="10" width="211" height="211"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-zo-lL8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="211" height="100.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kht-TR-YQc" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="100.5"/>
+                                                                        <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <state key="normal" image="plusSign"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puI-kB-0Tk" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="110.5" y="0.0" width="100.5" height="100.5"/>
+                                                                        <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <state key="normal" image="plusSign"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3hL-PT-KAa">
+                                                                <rect key="frame" x="0.0" y="110.5" width="211" height="100.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-7Y-sfJ" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="100.5"/>
+                                                                        <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <state key="normal" image="plusSign"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhJ-1x-weR" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="109.5" y="0.0" width="101.5" height="100.5"/>
+                                                                        <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <state key="normal" image="plusSign"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="6"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="rSO-AB-4Ig" firstAttribute="leading" secondItem="Nht-vk-aPT" secondAttribute="leading" constant="10" id="0FV-iX-41a"/>
+                                                    <constraint firstItem="rSO-AB-4Ig" firstAttribute="top" secondItem="Nht-vk-aPT" secondAttribute="top" constant="10" id="EUX-Wy-3ej"/>
                                                     <constraint firstAttribute="width" secondItem="Nht-vk-aPT" secondAttribute="height" multiplier="1:1" id="O2l-ID-nmm"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rSO-AB-4Ig" secondAttribute="trailing" constant="10" id="gML-qT-aQD"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rSO-AB-4Ig" secondAttribute="bottom" constant="10" id="rp4-y6-tfl"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -95,7 +172,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="00o-Rm-ZHa">
-                                        <rect key="frame" x="477" y="125" width="30" height="56"/>
+                                        <rect key="frame" x="447" y="110" width="55" height="31"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-Mu-wP4">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
@@ -117,10 +194,11 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="bottom arrow" translatesAutoresizingMaskIntoConstraints="NO" id="LIR-X7-UZ9">
-                                                <rect key="frame" x="0.0" y="36" width="30" height="20"/>
+                                                <rect key="frame" x="35" y="0.0" width="20" height="31"/>
                                                 <variation key="heightClass=compact" image="right arrow"/>
                                             </imageView>
                                         </subviews>
+                                        <variation key="heightClass=compact" axis="horizontal"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -141,31 +219,49 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-N0-HSf">
-                                <rect key="frame" x="577" y="69" width="80" height="286"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-N0-HSf">
+                                <rect key="frame" x="520" y="69" width="38" height="231"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kb3-qf-thL" secondAttribute="height" multiplier="1:1" id="Fdz-95-2nF"/>
                                         </constraints>
                                         <state key="normal" image="photo check" backgroundImage="two photos up"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Mn-GOv">
-                                        <rect key="frame" x="0.0" y="103" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="48" width="38" height="38.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zJr-Mn-GOv" secondAttribute="height" multiplier="1:1" id="7mZ-ca-S4W"/>
                                         </constraints>
                                         <state key="normal" image="photo check" backgroundImage="four photos layout"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G65-KZ-B5c">
-                                        <rect key="frame" x="0.0" y="206" width="80" height="80"/>
+                                        <rect key="frame" x="0.0" y="96.5" width="38" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="G65-KZ-B5c" secondAttribute="height" multiplier="1:1" id="yyy-yS-ZrU"/>
                                         </constraints>
                                         <state key="normal" image="photo check" backgroundImage="two photos down"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-97-rxT">
+                                        <rect key="frame" x="0.0" y="144.5" width="38" height="38.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EM9-97-rxT" secondAttribute="height" multiplier="1:1" id="Fas-Jy-qYX"/>
+                                        </constraints>
+                                        <state key="normal" image="photo check" backgroundImage="two photos layout"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-Jp-NcV">
+                                        <rect key="frame" x="0.0" y="193" width="38" height="38"/>
+                                        <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="hBS-Jp-NcV" secondAttribute="height" multiplier="1:1" id="2xk-Ca-QiT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
+                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="hBS-Jp-NcV" firstAttribute="width" secondItem="hBS-Jp-NcV" secondAttribute="height" multiplier="1:1" id="Bjf-0h-YO0"/>
+                                </constraints>
                                 <variation key="heightClass=compact" axis="vertical"/>
                             </stackView>
                         </subviews>
@@ -179,6 +275,9 @@
                             <constraint firstItem="OBy-N0-HSf" firstAttribute="bottom" secondItem="rub-zY-JYz" secondAttribute="bottom" id="FMd-kb-Cjj">
                                 <variation key="heightClass=compact" constant="-10"/>
                             </constraint>
+                            <constraint firstItem="rub-zY-JYz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iyv-Wu-y2b">
+                                <variation key="heightClass=compact" constant="-30"/>
+                            </constraint>
                             <constraint firstItem="rLP-Uw-jTQ" firstAttribute="bottom" secondItem="rub-zY-JYz" secondAttribute="top" constant="10" id="JJy-FX-WUQ">
                                 <variation key="heightClass=compact" constant="-10"/>
                             </constraint>
@@ -186,8 +285,11 @@
                                 <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="OBy-N0-HSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="YIb-B0-Mem"/>
-                            <constraint firstItem="rub-zY-JYz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Z7n-1Q-9HO">
-                                <variation key="heightClass=compact" constant="10"/>
+                            <constraint firstItem="rub-zY-JYz" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="f3q-wh-itp">
+                                <variation key="heightClass=compact" constant="1000"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rub-zY-JYz" secondAttribute="trailing" constant="35" id="fOu-jx-EYt">
+                                <variation key="heightClass=compact" constant="50"/>
                             </constraint>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OBy-N0-HSf" secondAttribute="bottom" constant="10" id="oii-rZ-Aah"/>
                             <constraint firstItem="rub-zY-JYz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qSd-aC-O6H">
@@ -199,7 +301,6 @@
                             <constraint firstItem="rub-zY-JYz" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="OBy-N0-HSf" secondAttribute="leading" constant="10" id="vOM-gY-lcE">
                                 <variation key="heightClass=compact" constant="-10"/>
                             </constraint>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rub-zY-JYz" secondAttribute="trailing" constant="35" id="x35-Hl-YsR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OBy-N0-HSf" secondAttribute="trailing" constant="35" id="zWX-fo-qoE">
                                 <variation key="heightClass=compact" constant="10"/>
                             </constraint>
@@ -218,7 +319,6 @@
                         <variation key="heightClass=compact">
                             <mask key="constraints">
                                 <exclude reference="oii-rZ-Aah"/>
-                                <exclude reference="x35-Hl-YsR"/>
                                 <exclude reference="qSd-aC-O6H"/>
                                 <include reference="soT-up-ih4"/>
                                 <include reference="vOM-gY-lcE"/>
@@ -241,11 +341,13 @@
         <image name="four photos layout" width="80" height="80"/>
         <image name="left arrow" width="20" height="20"/>
         <image name="photo check" width="80" height="80"/>
+        <image name="plusSign" width="50" height="50"/>
         <image name="right arrow" width="20" height="20"/>
         <image name="top arrow" width="20" height="20"/>
         <image name="trashcan" width="80" height="70"/>
         <image name="trashcanLid" width="80" height="20"/>
         <image name="two photos down" width="80" height="80"/>
+        <image name="two photos layout" width="80" height="80"/>
         <image name="two photos up" width="80" height="80"/>
     </resources>
 </document>
