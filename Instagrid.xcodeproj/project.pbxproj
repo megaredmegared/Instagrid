@@ -13,9 +13,13 @@
 		4D33B62921A5650400FD41A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B62721A5650400FD41A6 /* LaunchScreen.storyboard */; };
 		4D33B63121A577EA00FD41A6 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B63021A577EA00FD41A6 /* ThirstySoftRegular.otf */; };
 		4D33B63321A577F700FD41A6 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B63221A577F700FD41A6 /* Delm-Medium.otf */; };
+		4D6F733D21B144F9000248F5 /* LayoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F733C21B144F9000248F5 /* LayoutButton.swift */; };
+		4D6F733F21B14532000248F5 /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F733E21B14532000248F5 /* PhotoButton.swift */; };
+		4D6F734121B14554000248F5 /* ColorPickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F734021B14554000248F5 /* ColorPickerButton.swift */; };
+		4D6F734421B153D6000248F5 /* RunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F734321B153D6000248F5 /* RunApp.swift */; };
 		4D86F99821A6BF43004BDF50 /* ExtentionViewOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D86F99721A6BF43004BDF50 /* ExtentionViewOption.swift */; };
-		4D86F99A21A6CFCD004BDF50 /* ImagePhotoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D86F99921A6CFCD004BDF50 /* ImagePhotoLocation.swift */; };
 		4DC0AA3321AC31F7000D9B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC0AA3221AC31F7000D9B76 /* Assets.xcassets */; };
+		4DC95F2221B02E37001DFD3B /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC95F2121B02E37001DFD3B /* PhotosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +31,13 @@
 		4D33B62A21A5650400FD41A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D33B63021A577EA00FD41A6 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		4D33B63221A577F700FD41A6 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		4D6F733C21B144F9000248F5 /* LayoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutButton.swift; sourceTree = "<group>"; };
+		4D6F733E21B14532000248F5 /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
+		4D6F734021B14554000248F5 /* ColorPickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerButton.swift; sourceTree = "<group>"; };
+		4D6F734321B153D6000248F5 /* RunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunApp.swift; sourceTree = "<group>"; };
 		4D86F99721A6BF43004BDF50 /* ExtentionViewOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionViewOption.swift; sourceTree = "<group>"; };
-		4D86F99921A6CFCD004BDF50 /* ImagePhotoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePhotoLocation.swift; sourceTree = "<group>"; };
 		4DC0AA3221AC31F7000D9B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DC95F2121B02E37001DFD3B /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				4D83C65E21A5928700865E6E /* Supporting Files */,
+				4D6F734221B153AD000248F5 /* model */,
 				4D83C65D21A5927800865E6E /* Controller */,
 				4D83C65C21A5927000865E6E /* View */,
 				4D33B62A21A5650400FD41A6 /* Info.plist */,
@@ -70,12 +79,23 @@
 			path = Instagrid;
 			sourceTree = "<group>";
 		};
+		4D6F734221B153AD000248F5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4D6F734321B153D6000248F5 /* RunApp.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		4D83C65C21A5927000865E6E /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4D33B62221A5650300FD41A6 /* Main.storyboard */,
+				4D6F733C21B144F9000248F5 /* LayoutButton.swift */,
+				4D6F733E21B14532000248F5 /* PhotoButton.swift */,
+				4D6F734021B14554000248F5 /* ColorPickerButton.swift */,
 				4D86F99721A6BF43004BDF50 /* ExtentionViewOption.swift */,
-				4D86F99921A6CFCD004BDF50 /* ImagePhotoLocation.swift */,
+				4DC95F2121B02E37001DFD3B /* PhotosView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,9 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6F734121B14554000248F5 /* ColorPickerButton.swift in Sources */,
 				4D33B62121A5650300FD41A6 /* ViewController.swift in Sources */,
-				4D86F99A21A6CFCD004BDF50 /* ImagePhotoLocation.swift in Sources */,
+				4D6F733D21B144F9000248F5 /* LayoutButton.swift in Sources */,
 				4D86F99821A6BF43004BDF50 /* ExtentionViewOption.swift in Sources */,
+				4DC95F2221B02E37001DFD3B /* PhotosView.swift in Sources */,
+				4D6F734421B153D6000248F5 /* RunApp.swift in Sources */,
+				4D6F733F21B14532000248F5 /* PhotoButton.swift in Sources */,
 				4D33B61F21A5650300FD41A6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

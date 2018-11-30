@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,11 +23,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-Uw-jTQ">
-                                <rect key="frame" x="95" y="30" width="130" height="39"/>
+                                <rect key="frame" x="122.66666666666669" y="54" width="130" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="AaR-Bn-XUk"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="EWT-os-XZU"/>
@@ -37,10 +37,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rub-zY-JYz">
-                                <rect key="frame" x="20" y="84" width="280" height="400"/>
+                                <rect key="frame" x="20" y="178.66666666666666" width="335" height="454.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oIX-1U-6Sd">
-                                        <rect key="frame" x="54.5" y="0.0" width="171" height="49"/>
+                                        <rect key="frame" x="82" y="0.0" width="171" height="49"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="244" insetsLayoutMarginsFromSafeArea="NO" image="top arrow" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-Sg-CBY">
                                                 <rect key="frame" x="0.0" y="0.0" width="171" height="20"/>
@@ -74,59 +74,54 @@ to share</string>
                                         <variation key="heightClass=compact" alignment="fill" axis="horizontal" distribution="fill"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QD9-Xq-nqO">
-                                        <rect key="frame" x="0.0" y="59" width="280" height="280"/>
+                                        <rect key="frame" x="0.0" y="59" width="335" height="335"/>
                                         <subviews>
-                                            <view contentMode="scaleAspectFit" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-vk-aPT" customClass="DesignableView" customModule="Instagrid" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                            <view contentMode="scaleAspectFit" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-vk-aPT" customClass="PhotosView" customModule="Instagrid" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="335"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rSO-AB-4Ig">
-                                                        <rect key="frame" x="10" y="10" width="260" height="260"/>
+                                                        <rect key="frame" x="10" y="10" width="315" height="315"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-zo-lL8">
-                                                                <rect key="frame" x="0.0" y="0.0" width="260" height="125"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="315" height="152.33333333333334"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kht-TR-YQc" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kht-TR-YQc" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="152.66666666666666" height="152.33333333333334"/>
                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" image="plusSign"/>
-                                                                        <userDefinedRuntimeAttributes>
-                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="6"/>
-                                                                            </userDefinedRuntimeAttribute>
-                                                                        </userDefinedRuntimeAttributes>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puI-kB-0Tk" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="135" y="0.0" width="125" height="125"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puI-kB-0Tk" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="162.66666666666663" y="0.0" width="152.33333333333337" height="152.33333333333334"/>
                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" image="plusSign"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="6"/>
+                                                                                <real key="value" value="1"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3hL-PT-KAa">
-                                                                <rect key="frame" x="0.0" y="135" width="260" height="125"/>
+                                                                <rect key="frame" x="0.0" y="162.33333333333337" width="315" height="152.66666666666663"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-7Y-sfJ" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="125"/>
+                                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-7Y-sfJ" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="153.66666666666666" height="152.66666666666666"/>
                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" image="plusSign"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="6"/>
+                                                                                <real key="value" value="1"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhJ-1x-weR" customClass="DesignableButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="134" y="0.0" width="126" height="125"/>
+                                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhJ-1x-weR" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="161.66666666666663" y="0.0" width="153.33333333333337" height="152.66666666666666"/>
                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" image="plusSign"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="6"/>
+                                                                                <real key="value" value="1"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
@@ -143,38 +138,30 @@ to share</string>
                                                     <constraint firstAttribute="trailing" secondItem="rSO-AB-4Ig" secondAttribute="trailing" constant="10" id="gML-qT-aQD"/>
                                                     <constraint firstAttribute="bottom" secondItem="rSO-AB-4Ig" secondAttribute="bottom" constant="10" id="rp4-y6-tfl"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                        <real key="value" value="4"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.5"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="boutonBottomLeft" destination="Sn1-7Y-sfJ" id="Tdd-fe-zFc"/>
+                                                    <outlet property="boutonBottomRight" destination="XhJ-1x-weR" id="OwB-ol-FNl"/>
+                                                    <outlet property="boutonTopLeft" destination="kht-TR-YQc" id="qdJ-WP-52B"/>
+                                                    <outlet property="boutonTopRight" destination="puI-kB-0Tk" id="WTQ-Jb-jJG"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="00o-Rm-ZHa">
-                                        <rect key="frame" x="125" y="349" width="30" height="51"/>
+                                        <rect key="frame" x="152.66666666666666" y="404" width="30" height="50.666666666666686"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-Mu-wP4">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30.666666666666668"/>
                                                 <subviews>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="trashcanLid" translatesAutoresizingMaskIntoConstraints="NO" id="R2L-DW-3cQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="7.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="7.333333333333333"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="7at-bA-4le"/>
                                                             <constraint firstAttribute="width" secondItem="R2L-DW-3cQ" secondAttribute="height" multiplier="4:1" id="bg4-ix-WCU"/>
                                                         </constraints>
                                                     </imageView>
                                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="trashcan" translatesAutoresizingMaskIntoConstraints="NO" id="Iki-fZ-TpE">
-                                                        <rect key="frame" x="0.0" y="4.5" width="30" height="26.5"/>
+                                                        <rect key="frame" x="0.0" y="4.3333333333333695" width="30" height="26.333333333333329"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="30" id="I35-sI-E2I"/>
                                                             <constraint firstAttribute="width" secondItem="Iki-fZ-TpE" secondAttribute="height" multiplier="8:7" id="PeE-Gg-6ki"/>
@@ -183,7 +170,7 @@ to share</string>
                                                 </subviews>
                                             </stackView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="bottom arrow" translatesAutoresizingMaskIntoConstraints="NO" id="LIR-X7-UZ9">
-                                                <rect key="frame" x="0.0" y="31" width="30" height="20"/>
+                                                <rect key="frame" x="0.0" y="30.666666666666742" width="30" height="20"/>
                                                 <variation key="heightClass=compact" image="right arrow"/>
                                             </imageView>
                                         </subviews>
@@ -209,38 +196,52 @@ to share</string>
                                 </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-N0-HSf">
-                                <rect key="frame" x="20" y="510" width="280" height="48"/>
+                                <rect key="frame" x="20" y="709" width="335" height="59"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL">
-                                        <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Kb3-qf-thL" secondAttribute="height" multiplier="1:1" id="Fdz-95-2nF"/>
                                         </constraints>
-                                        <state key="normal" image="photo check" backgroundImage="two photos up"/>
+                                        <state key="normal" backgroundImage="two photos up">
+                                            <color key="titleColor" red="0.01209461115" green="1" blue="0.063116314780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapTwoPhotosTopButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI2-5Z-0LF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Mn-GOv">
-                                        <rect key="frame" x="58" y="0.0" width="48" height="48"/>
+                                        <rect key="frame" x="69" y="0.0" width="59" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="zJr-Mn-GOv" secondAttribute="height" multiplier="1:1" id="7mZ-ca-S4W"/>
                                         </constraints>
                                         <state key="normal" image="photo check" backgroundImage="four photos layout"/>
+                                        <connections>
+                                            <action selector="didTapFourPhotosButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="98A-fP-bSI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G65-KZ-B5c">
-                                        <rect key="frame" x="116" y="0.0" width="48" height="48"/>
+                                        <rect key="frame" x="138" y="0.0" width="59" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="G65-KZ-B5c" secondAttribute="height" multiplier="1:1" id="yyy-yS-ZrU"/>
                                         </constraints>
                                         <state key="normal" image="photo check" backgroundImage="two photos down"/>
+                                        <connections>
+                                            <action selector="didTapTwoPhotosBottomButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="WyX-eP-mC8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-97-rxT">
-                                        <rect key="frame" x="174" y="0.0" width="48" height="48"/>
+                                        <rect key="frame" x="207" y="0.0" width="59" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EM9-97-rxT" secondAttribute="height" multiplier="1:1" id="Fas-Jy-qYX"/>
                                         </constraints>
                                         <state key="normal" image="photo check" backgroundImage="two photos layout"/>
+                                        <connections>
+                                            <action selector="didTapTwoPhotosButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUg-W6-pGU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-Jp-NcV">
-                                        <rect key="frame" x="232" y="0.0" width="48" height="48"/>
+                                        <rect key="frame" x="276" y="0.0" width="59" height="59"/>
                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="hBS-Jp-NcV" secondAttribute="height" multiplier="1:1" id="2xk-Ca-QiT"/>
@@ -297,10 +298,10 @@ to share</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="soT-up-ih4"/>
-                                <exclude reference="vOM-gY-lcE"/>
                                 <exclude reference="JJy-FX-WUQ"/>
                                 <exclude reference="Jru-5k-SZA"/>
+                                <exclude reference="soT-up-ih4"/>
+                                <exclude reference="vOM-gY-lcE"/>
                                 <exclude reference="2GX-fD-Kgb"/>
                                 <exclude reference="FMd-kb-Cjj"/>
                             </mask>
@@ -309,23 +310,27 @@ to share</string>
                             <mask key="constraints">
                                 <exclude reference="fOu-jx-EYt"/>
                                 <exclude reference="oii-rZ-Aah"/>
+                                <include reference="JJy-FX-WUQ"/>
+                                <exclude reference="Jru-5k-SZA"/>
                                 <include reference="Iyv-Wu-y2b"/>
                                 <exclude reference="f3q-wh-itp"/>
                                 <exclude reference="qSd-aC-O6H"/>
                                 <include reference="soT-up-ih4"/>
                                 <include reference="vOM-gY-lcE"/>
-                                <include reference="JJy-FX-WUQ"/>
-                                <exclude reference="Jru-5k-SZA"/>
                                 <include reference="2GX-fD-Kgb"/>
                                 <include reference="FMd-kb-Cjj"/>
                                 <exclude reference="YIb-B0-Mem"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="photoView" destination="Nht-vk-aPT" id="44J-vF-cBj"/>
+                        <outlet property="twoPhotosTopButton" destination="Kb3-qf-thL" id="Esc-3m-0h0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="132.26600985221674"/>
+            <point key="canvasLocation" x="138.40000000000001" y="131.52709359605913"/>
         </scene>
     </scenes>
     <resources>
