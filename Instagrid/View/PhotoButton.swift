@@ -10,29 +10,13 @@ import UIKit
 
 class PhotoButton: UIButton {
     
-//    @IBInspectable
-//    var cornerRadius: CGFloat {
-//                get {
-//                    return layer.cornerRadius
-//                }
-//                set {
-//                    layer.cornerRadius = 6
-//            }
-//   }
+    /// Round corner for the photos
     
-    
-//    override var layer: CAShapeLayer {
-//        get {
-//            return super.layer as! CAShapeLayer
-//        }
-//    }
-//    override layer.cornerRadius = 6
-    
-   @IBInspectable
-    var cornerRadius: CGFloat = 0 {
-        didSet {
-            layer.cornerRadius = 6
-        }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        super.layer.cornerRadius = 6
     }
+   
+
 
 }

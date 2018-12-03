@@ -14,6 +14,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var photoView: PhotosView!
     @IBOutlet weak var twoPhotosTopButton: LayoutButton!
+    @IBOutlet weak var fourPhotosButton: LayoutButton!
+    @IBOutlet weak var twoPhotosBottomButton: LayoutButton!
+    @IBOutlet weak var twoPhotosButton: LayoutButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,31 +27,67 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func didTapTwoPhotosTopButton() {
-        photoView.layout = .twoPhotosTop
+    /// Mark layoutButton has actived with a check mark image
+    
+    func activeViewButton(is layout: PhotosView.Layout) {
+        photoView.layout = layout
+        switch layout {
+        case .twoPhotosTop :
+            twoPhotosTopButton.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
+            fourPhotosButton.setImage(nil, for: .normal)
+            twoPhotosBottomButton.setImage(nil, for: .normal)
+            twoPhotosButton.setImage(nil, for: .normal)
+            
+            twoPhotosTopButton.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
+            
+        case .twoPhotosBottom :
+            twoPhotosTopButton.setImage(nil, for: .normal)
+            fourPhotosButton.setImage(nil, for: .normal)
+            twoPhotosBottomButton.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
+            twoPhotosButton.setImage(nil, for: .normal)
+            
+            twoPhotosBottomButton.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
+            
+        case .fourPhotos :
+            twoPhotosTopButton.setImage(nil, for: .normal)
+            fourPhotosButton.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
+            twoPhotosBottomButton.setImage(nil, for: .normal)
+            twoPhotosButton.setImage(nil, for: .normal)
+            
+            fourPhotosButton.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
+            
+        case .twoPhotos :
+            twoPhotosTopButton.setImage(nil, for: .normal)
+            fourPhotosButton.setImage(nil, for: .normal)
+            twoPhotosBottomButton.setImage(nil, for: .normal)
+            twoPhotosButton.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
+            
+            twoPhotosButton.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
+        }
         
-        twoPhotosTopButton.setImage(#imageLiteral(resourceName: "photo check"), for: .selected)
-        twoPhotosTopButton.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
+        
+    }
+    
+    @IBAction func didTapTwoPhotosTopButton() {
+        activeViewButton(is: .twoPhotosTop)
     }
     
     
     @IBAction func didTapFourPhotosButton() {
-        photoView.layout = .fourPhotos
+        activeViewButton(is: .fourPhotos)
     }
     
     @IBAction func didTapTwoPhotosBottomButton() {
-        photoView.layout = .twoPhotosBottom
+        activeViewButton(is: .twoPhotosBottom)
     }
     
     @IBAction func didTapTwoPhotosButton() {
-        photoView.layout = .twoPhotos
+        activeViewButton(is: .twoPhotos)
     }
     
     private func startInstagrid() {
-        photoView.layout = .twoPhotosTop
-        photoView.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
-        twoPhotosTopButton.setTitle("test", for: .normal)
-        
+        activeViewButton(is: .twoPhotosTop)
+        photoView.backgroundColor = #colorLiteral(red: 0.01577522606, green: 0.3959292471, blue: 0.6036854386, alpha: 1)
     }
 }
 

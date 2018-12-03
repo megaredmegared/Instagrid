@@ -9,7 +9,8 @@
 import UIKit
 
 class LayoutButton: UIButton {
-
-   // self.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
     
+
+        
 }
+

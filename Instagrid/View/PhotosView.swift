@@ -1,13 +1,27 @@
 
 import UIKit
 
+/// Settings for the layouts of photos
+
 class PhotosView: UIView {
     
     @IBOutlet private var boutonTopLeft: PhotoButton!
-    @IBOutlet private var boutonTopRight: UIButton!
-    @IBOutlet private var boutonBottomLeft: UIButton!
-    @IBOutlet private var boutonBottomRight: UIButton!
-    //boutonTopLeft.layer.cornerRadius = 6
+    @IBOutlet private var boutonTopRight: PhotoButton!
+    @IBOutlet private var boutonBottomLeft: PhotoButton!
+    @IBOutlet private var boutonBottomRight: PhotoButton!
+    
+    
+    /// Shadow under the frame of the photo layout
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        super.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        super.layer.shadowOpacity = 0.5
+        super.layer.shadowOffset = CGSize(width: 0, height: 2)
+        super.layer.shadowRadius = 4
+    }
+    
+    /// Every possible photos layouts cases
     
     enum Layout {
         case twoPhotosTop, twoPhotosBottom, fourPhotos, twoPhotos
@@ -18,6 +32,8 @@ class PhotosView: UIView {
             setLayout(layout)
         }
     }
+    
+    /// Layouts settings
     
     private func setLayout(_ layout: Layout) {
         switch layout {
@@ -35,7 +51,14 @@ class PhotosView: UIView {
             boutonBottomRight.isHidden = true
         }
     }
-
+    
+    func getPhotoFromLibrary() {
+        
+    }
+    
+    func loadPhotos() {
+        // boutonTopLeft.backgroundImage(for: <#T##UIControl.State#>)
+    }
  
 
     
