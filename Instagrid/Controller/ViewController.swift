@@ -135,7 +135,7 @@ class ViewController: UIViewController {
     /// Start the app
     
     private func startInstagrid() {
-        activeViewButton(is: .twoPhotosTop)
+        activeViewButton(is: .fourPhotos)
         setBackgroundColor()
     }
 }
