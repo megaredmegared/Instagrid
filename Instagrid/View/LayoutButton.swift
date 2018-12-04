@@ -9,8 +9,7 @@
 import UIKit
 
 class LayoutButton: UIButton {
-    
 
-        
+    
 }
 
