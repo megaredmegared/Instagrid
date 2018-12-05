@@ -101,11 +101,17 @@ to share</string>
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="105.5" height="105.5"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
+                                                                                                        <connections>
+                                                                                                            <action selector="didTapLoadTopLeftPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnc-H8-0Rj"/>
+                                                                                                        </connections>
                                                                                                     </button>
                                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puI-kB-0Tk" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
                                                                                                         <rect key="frame" x="115.5" y="0.0" width="105.5" height="105.5"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
+                                                                                                        <connections>
+                                                                                                            <action selector="didTapLoadTopRIght:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgC-IP-Gmi"/>
+                                                                                                        </connections>
                                                                                                     </button>
                                                                                                 </subviews>
                                                                                             </stackView>
@@ -116,11 +122,17 @@ to share</string>
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="106.5" height="105.5"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
+                                                                                                        <connections>
+                                                                                                            <action selector="didTapLoadBottomLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRw-kX-P9M"/>
+                                                                                                        </connections>
                                                                                                     </button>
                                                                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhJ-1x-weR" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
                                                                                                         <rect key="frame" x="114.5" y="0.0" width="106.5" height="105.5"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
+                                                                                                        <connections>
+                                                                                                            <action selector="didTapBottomRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vH-w5-NAT"/>
+                                                                                                        </connections>
                                                                                                     </button>
                                                                                                 </subviews>
                                                                                             </stackView>
@@ -332,13 +344,13 @@ to share</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="548" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQq-YN-RIt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="8" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="17"/>
                                                                 <color key="textColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Py4-MY-XHX">
-                                                                <rect key="frame" x="1" y="0.0" width="549" height="31"/>
+                                                                <rect key="frame" x="9" y="0.0" width="541" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="vvr-2Y-gJo"/>
@@ -430,6 +442,10 @@ to share</string>
                     </view>
                     <connections>
                         <outlet property="blueSlider" destination="J9Z-md-dip" id="KTM-k1-hhu"/>
+                        <outlet property="buttonBottomLeft" destination="Sn1-7Y-sfJ" id="jyW-zI-faX"/>
+                        <outlet property="buttonBottomRight" destination="XhJ-1x-weR" id="9vB-SS-9K0"/>
+                        <outlet property="buttonTopLeft" destination="kht-TR-YQc" id="LMB-wp-n79"/>
+                        <outlet property="buttonTopRight" destination="puI-kB-0Tk" id="SEE-8a-ibE"/>
                         <outlet property="colorPickerButton" destination="hBS-Jp-NcV" id="uep-rz-0x3"/>
                         <outlet property="colorSliders" destination="kQH-OE-3Dj" id="9cx-65-9rv"/>
                         <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="nUU-Ml-Y55"/>

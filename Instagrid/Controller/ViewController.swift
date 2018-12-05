@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var photoView: PhotosView!
     @IBOutlet weak var twoPhotosTopButton: LayoutButton!
@@ -20,12 +20,84 @@ class ViewController: UIViewController {
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet weak var buttonTopLeft: PhotoButton!
+    @IBOutlet weak var buttonTopRight: PhotoButton!
+    @IBOutlet weak var buttonBottomLeft: PhotoButton!
+    @IBOutlet weak var buttonBottomRight: PhotoButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         startInstagrid()
+    }
+    
+    /// Load photo from library in the layout
+    
+    let imagePicker = UIImagePickerController()
+    enum PhotoButtonTapped {
+        case topLeftButton, topRightButton, bottomLeftButton, bottomRightButton
+    }
+
+    var photoButtonTapped: PhotoButtonTapped = .topLeftButton // lazy weak ????
+    
+    func selectPhotoButton(_ selectedPhoto: PhotoButtonTapped, image: UIImage) {
+        switch photoButtonTapped {
+        case .topLeftButton :
+            buttonTopLeft.setImage(image, for: .normal)
+            buttonTopLeft.imageView?.contentMode = .scaleAspectFill
+        case .topRightButton :
+            buttonTopRight.setImage(image, for: .normal)
+            buttonTopRight.imageView?.contentMode = .scaleAspectFill
+        case .bottomLeftButton :
+            buttonBottomLeft.setImage(image, for: .normal)
+            buttonBottomLeft.imageView?.contentMode = .scaleAspectFill
+        case .bottomRightButton :
+            buttonBottomRight.setImage(image, for: .normal)
+            buttonBottomRight.imageView?.contentMode = .scaleAspectFill
+        }
+    }
+    
+    func pickAnImageInLibrary() {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+
+            selectPhotoButton(photoButtonTapped, image: image)
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    @IBAction func didTapLoadTopLeftPhoto(_ sender: Any) {
+        pickAnImageInLibrary()
+        photoButtonTapped = .topLeftButton
+    }
+    @IBAction func didTapLoadTopRIght(_ sender: Any) {
+        pickAnImageInLibrary()
+        photoButtonTapped = .topRightButton
+    }
+    @IBAction func didTapLoadBottomLeft(_ sender: PhotoButton) {
+        pickAnImageInLibrary()
+        photoButtonTapped = .bottomLeftButton
+    }
+    @IBAction func didTapBottomRight(_ sender: Any) {
+        pickAnImageInLibrary()
+        photoButtonTapped = .bottomRightButton
     }
     
     /// Mark layoutButton has actived with a check mark image
