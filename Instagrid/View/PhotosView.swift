@@ -51,15 +51,4 @@ class PhotosView: UIView {
             boutonBottomRight.isHidden = true
         }
     }
-    
-    func getPhotoFromLibrary() {
-        
-    }
-    
-    func loadPhotos() {
-        // boutonTopLeft.backgroundImage(for: <#T##UIControl.State#>)
-    }
- 
-
-    
 }

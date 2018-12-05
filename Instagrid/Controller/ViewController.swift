@@ -30,19 +30,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-        
         startInstagrid()
     }
     
     /// Load photo from library in the layout
     
     let imagePicker = UIImagePickerController()
+    
+    /// All cases of buttons
+    
     enum PhotoButtonTapped {
         case topLeftButton, topRightButton, bottomLeftButton, bottomRightButton
     }
 
+    /// assign button tapped to a variable
+    
     var photoButtonTapped: PhotoButtonTapped = .topLeftButton // lazy weak ????
+    
+    // TODO: Image is not corner rounded
+    
+    /// assign image to the button tapped
     
     func selectPhotoButton(_ selectedPhoto: PhotoButtonTapped, image: UIImage) {
         switch photoButtonTapped {
@@ -61,6 +68,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    /// Pick an image into the photo library
+    
     func pickAnImageInLibrary() {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
@@ -68,6 +77,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true)
     }
     
+    // TODO: Understand this function
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -81,7 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    
+    /// Actions to import images on buttons
     
     @IBAction func didTapLoadTopLeftPhoto(_ sender: Any) {
         pickAnImageInLibrary()

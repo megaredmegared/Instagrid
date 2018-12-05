@@ -10,6 +10,10 @@ import UIKit
 
 final class ControlContainableScrollView: UIScrollView {
     
+    // TODO: Understand this function
+    
+    /// slider could work even if we are touching a button
+    
     override func touchesShouldCancel(in view: UIView) -> Bool {
         if view is UIControl
             && !(view is UITextInput)
