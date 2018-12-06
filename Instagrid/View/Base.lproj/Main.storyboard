@@ -344,13 +344,13 @@ to share</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="548" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQq-YN-RIt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="8" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="4" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="17"/>
                                                                 <color key="textColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Py4-MY-XHX">
-                                                                <rect key="frame" x="9" y="0.0" width="541" height="31"/>
+                                                                <rect key="frame" x="5" y="0.0" width="545" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="vvr-2Y-gJo"/>
@@ -362,13 +362,13 @@ to share</string>
                                                         <rect key="frame" x="0.0" y="33" width="548" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omh-j7-rXU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="8.5" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="17"/>
                                                                 <color key="textColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="101" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="A7L-X3-yNs">
-                                                                <rect key="frame" x="1" y="0.0" width="549" height="31"/>
+                                                                <rect key="frame" x="9.5" y="0.0" width="540.5" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="c4g-eI-s71"/>

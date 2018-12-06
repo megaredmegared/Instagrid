@@ -56,15 +56,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         case .topLeftButton :
             buttonTopLeft.setImage(image, for: .normal)
             buttonTopLeft.imageView?.contentMode = .scaleAspectFill
+            buttonTopLeft.imageView?.layer.cornerRadius = 6
         case .topRightButton :
             buttonTopRight.setImage(image, for: .normal)
             buttonTopRight.imageView?.contentMode = .scaleAspectFill
+            buttonTopRight.imageView?.layer.cornerRadius = 6
         case .bottomLeftButton :
             buttonBottomLeft.setImage(image, for: .normal)
             buttonBottomLeft.imageView?.contentMode = .scaleAspectFill
+            buttonBottomLeft.imageView?.layer.cornerRadius = 6
         case .bottomRightButton :
             buttonBottomRight.setImage(image, for: .normal)
             buttonBottomRight.imageView?.contentMode = .scaleAspectFill
+            buttonBottomRight.imageView?.layer.cornerRadius = 6
         }
     }
     
