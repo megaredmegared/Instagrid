@@ -10,20 +10,21 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    
     @IBOutlet weak var photoView: PhotosView!
     @IBOutlet weak var twoPhotosTopButton: LayoutButton!
     @IBOutlet weak var fourPhotosButton: LayoutButton!
     @IBOutlet weak var twoPhotosBottomButton: LayoutButton!
     @IBOutlet weak var twoPhotosButton: LayoutButton!
+    @IBOutlet weak var twoPhotosVerticalButton: LayoutButton!
+    @IBOutlet weak var twoPhotosLeftButton: LayoutButton!
+    @IBOutlet weak var twoPhotosRightButton: LayoutButton!
+    @IBOutlet weak var onePhotosButton: LayoutButton!
     @IBOutlet weak var colorSliders: UIView!
     @IBOutlet weak var colorPickerButton: UIButton!
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
-    @IBOutlet weak var buttonTopLeft: PhotoButton!
-    @IBOutlet weak var buttonTopRight: PhotoButton!
-    @IBOutlet weak var buttonBottomLeft: PhotoButton!
-    @IBOutlet weak var buttonBottomRight: PhotoButton!
     
     
     override func viewDidLoad() {
@@ -32,6 +33,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         startInstagrid()
     }
+    
+    
+    var runApp = RunApp()
     
     /// Load photo from library in the layout
     
@@ -42,33 +46,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     enum PhotoButtonTapped {
         case topLeftButton, topRightButton, bottomLeftButton, bottomRightButton
     }
-
+    
     /// assign button tapped to a variable
     
     var photoButtonTapped: PhotoButtonTapped = .topLeftButton // lazy weak ????
     
-    // TODO: Image is not corner rounded
-    
     /// assign image to the button tapped
     
     func selectPhotoButton(_ selectedPhoto: PhotoButtonTapped, image: UIImage) {
+        
+        let cornerRadius: CGFloat = 6
+        
         switch photoButtonTapped {
         case .topLeftButton :
-            buttonTopLeft.setImage(image, for: .normal)
-            buttonTopLeft.imageView?.contentMode = .scaleAspectFill
-            buttonTopLeft.imageView?.layer.cornerRadius = 6
+            photoView.buttonTopLeft.setImage(image, for: .normal)
+            photoView.buttonTopLeft.imageView?.contentMode = .scaleAspectFill
+            photoView.buttonTopLeft.imageView?.layer.cornerRadius = cornerRadius
         case .topRightButton :
-            buttonTopRight.setImage(image, for: .normal)
-            buttonTopRight.imageView?.contentMode = .scaleAspectFill
-            buttonTopRight.imageView?.layer.cornerRadius = 6
+            photoView.buttonTopRight.setImage(image, for: .normal)
+            photoView.buttonTopRight.imageView?.contentMode = .scaleAspectFill
+            photoView.buttonTopRight.imageView?.layer.cornerRadius = cornerRadius
         case .bottomLeftButton :
-            buttonBottomLeft.setImage(image, for: .normal)
-            buttonBottomLeft.imageView?.contentMode = .scaleAspectFill
-            buttonBottomLeft.imageView?.layer.cornerRadius = 6
+            photoView.buttonBottomLeft.setImage(image, for: .normal)
+            photoView.buttonBottomLeft.imageView?.contentMode = .scaleAspectFill
+            photoView.buttonBottomLeft.imageView?.layer.cornerRadius = cornerRadius
         case .bottomRightButton :
-            buttonBottomRight.setImage(image, for: .normal)
-            buttonBottomRight.imageView?.contentMode = .scaleAspectFill
-            buttonBottomRight.imageView?.layer.cornerRadius = 6
+            photoView.buttonBottomRight.setImage(image, for: .normal)
+            photoView.buttonBottomRight.imageView?.contentMode = .scaleAspectFill
+            photoView.buttonBottomRight.imageView?.layer.cornerRadius = cornerRadius
         }
     }
     
@@ -86,7 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-
+            
             selectPhotoButton(photoButtonTapped, image: image)
             
         }
@@ -132,15 +137,27 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         case .fourPhotos :
             button = fourPhotosButton
             
+        case .twoPhotosVertical :
+            button = twoPhotosVerticalButton
+            
+        case .twoPhotoLeft :
+            button = twoPhotosLeftButton
+            
+        case .twoPhotoRight :
+            button = twoPhotosRightButton
+            
+        case .onePhoto :
+            button = onePhotosButton
+            
         case .twoPhotos :
             button = twoPhotosButton
         }
         
-        let buttons = [twoPhotosTopButton, twoPhotosBottomButton, fourPhotosButton, twoPhotosButton]
+        let buttons = [twoPhotosTopButton, twoPhotosBottomButton, fourPhotosButton, twoPhotosButton, twoPhotosVerticalButton, twoPhotosLeftButton, twoPhotosRightButton, onePhotosButton]
         
         for i in buttons {
             if i != nil {
-                i!.setImage(nil, for: .normal)
+                i?.setImage(nil, for: .normal)
             }
         }
         
@@ -167,16 +184,44 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func didTapTwoPhotosButton() {
         activeViewButton(is: .twoPhotos)
     }
+    
+    @IBAction func didTapTwoPhotosVerticalButton() {
+        activeViewButton(is: .twoPhotosVertical)
+    }
+    
+    @IBAction func didTapTwoPhotosLeftButton() {
+        activeViewButton(is: .twoPhotoLeft)
+    }
+    
+    @IBAction func didTapTwoPhotosRightButton() {
+        activeViewButton(is: .twoPhotoRight)
+    }
+    
+    @IBAction func didTapOnePhotoButton() {
+        activeViewButton(is: .onePhoto)
+    }
+    
+    
+    
     @IBAction func showColorSliders() {
         colorSliders.isHidden = false
     }
     
-    /// Set background color with sliders
+    /// Set background color with sliders -----------------------------------------------------------------------
+    
+    // TODO: set variable to default value
     
     var red: CGFloat = 4 / 255
     var green: CGFloat = 101 / 255
     var blue: CGFloat = 154 / 255
     var alpha: CGFloat = 1
+    
+    /// Default values for the layout background
+    
+    let redDefault: CGFloat = 4 / 255
+    let greenDefault: CGFloat = 101 / 255
+    let blueDefault: CGFloat = 154 / 255
+    let aplhaDefault: CGFloat = 1
     
     func setBackgroundColor() {
         photoView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
@@ -196,20 +241,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         blue = CGFloat(sender.value) / 255
         setBackgroundColor()
     }
-    func resetBackgroundColor() {
-        photoView.backgroundColor = UIColor(red: 4 / 255, green: 101 / 255, blue: 154 / 255, alpha: alpha)
-        colorPickerButton.backgroundColor = UIColor(red: 4 / 255, green: 101 / 255, blue: 154 / 255, alpha: alpha)
-    }
     
-    // TODO: Find a way to set initial value in on area only
+    /// reset layout background color to default values
+    
+    func resetBackgroundColor() {
+        photoView.backgroundColor = UIColor(red: redDefault, green: greenDefault, blue: blueDefault, alpha: aplhaDefault)
+        colorPickerButton.backgroundColor = UIColor(red: redDefault, green: greenDefault, blue: blueDefault, alpha: aplhaDefault)
+    }
     
     /// Reset color sliders to there initial values
     
     @IBAction func resetColors() {
         resetBackgroundColor()
-        redSlider.value = 4
-        greenSlider.value = 101
-        blueSlider.value = 154
+        redSlider.value = Float(redDefault * 255)
+        greenSlider.value = Float(greenDefault * 255)
+        blueSlider.value = Float(blueDefault * 255)
     }
     
     /// Close color sliders
@@ -218,10 +264,103 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         colorSliders.isHidden = true
     }
     
-    /// Start the app
+    /// Drag photoview to send the photos or trash them -------------------------------------------------
+    
+    @IBAction func dragPhotoView(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .began, .changed:
+            // if photos charged
+            transformPhotoView(gesture: sender)
+        case .cancelled, .ended:
+            sendOrTrashPhotoView()
+        default:
+            break
+        }
+    }
+    
+    private func transformPhotoView(gesture: UIPanGestureRecognizer) {
+        
+        let translation = gesture.translation(in: photoView)
+        var translationTransform: CGAffineTransform
+        let screenHight = UIScreen.main.bounds.height
+        let screenWidth = UIScreen.main.bounds.width
+        
+        func resetPhotosImported() {
+            photoView.buttonTopLeft.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+            photoView.buttonTopRight.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+            photoView.buttonBottomLeft.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+            photoView.buttonBottomRight.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+        }
+        
+        /// detect device orientation for gesture direction
+        
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            
+            translationTransform = CGAffineTransform(translationX: translation.x, y: 0)
+            
+            photoView.transform = translationTransform
+            
+            /// landscape mode
+            if translation.x > 150 {
+                // erase
+                translationTransform = CGAffineTransform(translationX: screenWidth, y: 0)
+                resetPhotosImported()
+                
+                
+                
+            } else if translation.x > -150 {
+                
+                translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
+                // send photo
+                
+            }
+            /// portrait mode
+        } else {
+            translationTransform = CGAffineTransform(translationX: 0, y: translation.y)
+            photoView.transform = translationTransform
+            if translation.y > 150 {
+                // erase
+                translationTransform = CGAffineTransform(translationX: 0, y: screenHight)
+                resetPhotosImported()
+                
+                
+            } else if translation.y > -150 {
+                
+                translationTransform = CGAffineTransform(translationX: 0, y: -screenHight)
+                // send photo
+                // sharePhoto()
+                
+            }
+        }
+        
+    }
+    
+    func sharePhoto() {
+        let activityVC = UIActivityViewController(activityItems: [#imageLiteral(resourceName: "trashcan")], applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+        print("******** It works ***********")
+    }
+    
+    private func sendOrTrashPhotoView() {
+        
+        photoView.transform = .identity
+        
+    }
+    
+    // TODO: test button for sharing image
+    
+    @IBAction func shareButton(_ sender: LayoutButton) {
+        sharePhoto()
+        
+    }
+    
+    
+    
+    
+    /// Start the app -----------------------------------------------------------------------
     
     private func startInstagrid() {
-        activeViewButton(is: .fourPhotos)
+        activeViewButton(is: .twoPhotosTop)
         setBackgroundColor()
     }
 }

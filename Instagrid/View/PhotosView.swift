@@ -5,10 +5,14 @@ import UIKit
 
 class PhotosView: UIView {
     
-    @IBOutlet private var boutonTopLeft: PhotoButton!
-    @IBOutlet private var boutonTopRight: PhotoButton!
-    @IBOutlet private var boutonBottomLeft: PhotoButton!
-    @IBOutlet private var boutonBottomRight: PhotoButton!
+    @IBOutlet var buttonTopLeft: PhotoButton!
+    @IBOutlet var buttonTopRight: PhotoButton!
+    @IBOutlet var buttonBottomLeft: PhotoButton!
+    @IBOutlet var buttonBottomRight: PhotoButton!
+    
+    @IBOutlet private var maintStackView: UIStackView!
+    @IBOutlet private var firstSubStackView: UIStackView!
+    @IBOutlet private var secondSubStackView: UIStackView!
     
     
     /// Shadow under the frame of the photo layout
@@ -19,12 +23,14 @@ class PhotosView: UIView {
         super.layer.shadowOpacity = 0.5
         super.layer.shadowOffset = CGSize(width: 0, height: 2)
         super.layer.shadowRadius = 4
+        // TODO: Why not on top ?
+        super.layer.zPosition =  CGFloat.greatestFiniteMagnitude
     }
     
     /// Every possible photos layouts cases
     
     enum Layout {
-        case twoPhotosTop, twoPhotosBottom, fourPhotos, twoPhotos
+        case twoPhotosTop, twoPhotosBottom, fourPhotos, twoPhotos, twoPhotosVertical, twoPhotoLeft, twoPhotoRight, onePhoto
     }
     
     var layout: Layout = .twoPhotosTop {
@@ -38,17 +44,69 @@ class PhotosView: UIView {
     private func setLayout(_ layout: Layout) {
         switch layout {
         case .twoPhotosTop :
-            boutonTopRight.isHidden = false
-            boutonBottomRight.isHidden = true
+            buttonTopRight.isHidden = false
+            buttonBottomRight.isHidden = true
+            buttonBottomLeft.isHidden = false
+            maintStackView.axis = .vertical
+            firstSubStackView.axis = .horizontal
+            secondSubStackView.axis = .horizontal
+            secondSubStackView.isHidden = false
         case .twoPhotosBottom :
-            boutonTopRight.isHidden = true
-            boutonBottomRight.isHidden = false
+            buttonTopRight.isHidden = true
+            buttonBottomRight.isHidden = false
+            buttonBottomLeft.isHidden = false
+            maintStackView.axis = .vertical
+            firstSubStackView.axis = .horizontal
+            secondSubStackView.axis = .horizontal
+            secondSubStackView.isHidden = false
         case .fourPhotos :
-            boutonTopRight.isHidden = false
-            boutonBottomRight.isHidden = false
+            buttonTopRight.isHidden = false
+            buttonBottomRight.isHidden = false
+            buttonBottomLeft.isHidden = false
+            maintStackView.axis = .vertical
+            firstSubStackView.axis = .horizontal
+            secondSubStackView.axis = .horizontal
+            secondSubStackView.isHidden = false
         case .twoPhotos :
-            boutonTopRight.isHidden = true
-            boutonBottomRight.isHidden = true
+            buttonTopRight.isHidden = true
+            buttonBottomRight.isHidden = true
+            buttonBottomLeft.isHidden = false
+            maintStackView.axis = .vertical
+            firstSubStackView.axis = .horizontal
+            secondSubStackView.axis = .horizontal
+            secondSubStackView.isHidden = false
+        case .twoPhotoLeft :
+            buttonTopRight.isHidden = false
+            buttonBottomRight.isHidden = true
+            buttonBottomLeft.isHidden = false
+            maintStackView.axis = .horizontal
+            firstSubStackView.axis = .vertical
+            secondSubStackView.axis = .vertical
+            secondSubStackView.isHidden = false
+        case .twoPhotoRight :
+            buttonTopRight.isHidden = true
+            buttonBottomRight.isHidden = false
+            buttonBottomLeft.isHidden = false
+            maintStackView.axis = .horizontal
+            firstSubStackView.axis = .vertical
+            secondSubStackView.axis = .vertical
+            secondSubStackView.isHidden = false
+        case .onePhoto :
+            buttonTopRight.isHidden = true
+            buttonBottomRight.isHidden = true
+            buttonBottomLeft.isHidden = true
+            maintStackView.axis = .vertical
+            firstSubStackView.axis = .horizontal
+            secondSubStackView.axis = .horizontal
+            secondSubStackView.isHidden = true
+        case .twoPhotosVertical :
+            buttonTopRight.isHidden = false
+            buttonBottomRight.isHidden = true
+            buttonBottomLeft.isHidden = true
+            maintStackView.axis = .vertical
+            firstSubStackView.axis = .horizontal
+            secondSubStackView.axis = .horizontal
+            secondSubStackView.isHidden = true
         }
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,14 +23,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SxM-ha-Gb1">
-                                <rect key="frame" x="10" y="10" width="548" height="300"/>
+                                <rect key="frame" x="10" y="30" width="300" height="528"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-Uw-jTQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="548" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="EWT-os-XZU"/>
                                         </constraints>
@@ -39,26 +39,26 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lal-ch-qAb">
-                                        <rect key="frame" x="0.0" y="39" width="548" height="261"/>
+                                        <rect key="frame" x="0.0" y="39" width="300" height="489"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="84H-fq-BR6">
-                                                <rect key="frame" x="0.0" y="0.0" width="482" height="261"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="423"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jo1-ra-BOr">
-                                                        <rect key="frame" x="0.0" y="0.0" width="482" height="261"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="423"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rub-zY-JYz" userLabel="centralView">
-                                                                <rect key="frame" x="31" y="10" width="420" height="241"/>
+                                                                <rect key="frame" x="10" y="11.5" width="280" height="400"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oIX-1U-6Sd">
-                                                                        <rect key="frame" x="0.0" y="91.5" width="109" height="58"/>
+                                                                        <rect key="frame" x="54.5" y="0.0" width="171" height="49"/>
                                                                         <subviews>
                                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalHuggingPriority="244" insetsLayoutMarginsFromSafeArea="NO" image="top arrow" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-Sg-CBY">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="58"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="171" height="20"/>
                                                                                 <variation key="heightClass=compact" image="left arrow"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I9-cX-n4C">
-                                                                                <rect key="frame" x="20" y="0.0" width="171" height="58"/>
+                                                                                <rect key="frame" x="0.0" y="20" width="171" height="29"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="9hD-qb-T4G"/>
                                                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="171" id="oWZ-rd-1nR"/>
@@ -69,10 +69,10 @@
                                                                                 <variation key="heightClass=compact" hidden="YES"/>
                                                                             </label>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fkt-Nm-yM1">
-                                                                                <rect key="frame" x="20" y="0.0" width="89" height="58"/>
+                                                                                <rect key="frame" x="0.0" y="49" width="171" height="0.0"/>
                                                                                 <subviews>
                                                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="center" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5X-Up-q0X">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="89" height="58"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="89" height="0.0"/>
                                                                                         <string key="text">swipe left
 to share</string>
                                                                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
@@ -86,19 +86,19 @@ to share</string>
                                                                         <variation key="heightClass=compact" alignment="fill" axis="horizontal" distribution="fill"/>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QD9-Xq-nqO">
-                                                                        <rect key="frame" x="119" y="0.0" width="241" height="241"/>
+                                                                        <rect key="frame" x="0.0" y="59" width="280" height="280"/>
                                                                         <subviews>
                                                                             <view contentMode="scaleAspectFit" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="Nht-vk-aPT" customClass="PhotosView" customModule="Instagrid" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="241" height="241"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
                                                                                 <subviews>
                                                                                     <stackView opaque="NO" contentMode="center" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rSO-AB-4Ig">
-                                                                                        <rect key="frame" x="10" y="10" width="221" height="221"/>
+                                                                                        <rect key="frame" x="10" y="10" width="260" height="260"/>
                                                                                         <subviews>
                                                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JIr-zo-lL8">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="221" height="105.5"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="260" height="125"/>
                                                                                                 <subviews>
                                                                                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kht-TR-YQc" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="105.5" height="105.5"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
                                                                                                         <connections>
@@ -106,7 +106,7 @@ to share</string>
                                                                                                         </connections>
                                                                                                     </button>
                                                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puI-kB-0Tk" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
-                                                                                                        <rect key="frame" x="115.5" y="0.0" width="105.5" height="105.5"/>
+                                                                                                        <rect key="frame" x="135" y="0.0" width="125" height="125"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
                                                                                                         <connections>
@@ -116,10 +116,10 @@ to share</string>
                                                                                                 </subviews>
                                                                                             </stackView>
                                                                                             <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3hL-PT-KAa">
-                                                                                                <rect key="frame" x="0.0" y="115.5" width="221" height="105.5"/>
+                                                                                                <rect key="frame" x="0.0" y="135" width="260" height="125"/>
                                                                                                 <subviews>
                                                                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-7Y-sfJ" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="105.5"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="126" height="125"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
                                                                                                         <connections>
@@ -127,7 +127,7 @@ to share</string>
                                                                                                         </connections>
                                                                                                     </button>
                                                                                                     <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhJ-1x-weR" customClass="PhotoButton" customModule="Instagrid" customModuleProvider="target">
-                                                                                                        <rect key="frame" x="114.5" y="0.0" width="106.5" height="105.5"/>
+                                                                                                        <rect key="frame" x="134" y="0.0" width="126" height="125"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
                                                                                                         <connections>
@@ -148,16 +148,19 @@ to share</string>
                                                                                     <constraint firstAttribute="bottom" secondItem="rSO-AB-4Ig" secondAttribute="bottom" constant="10" id="rp4-y6-tfl"/>
                                                                                 </constraints>
                                                                                 <connections>
-                                                                                    <outlet property="boutonBottomLeft" destination="Sn1-7Y-sfJ" id="Tdd-fe-zFc"/>
-                                                                                    <outlet property="boutonBottomRight" destination="XhJ-1x-weR" id="OwB-ol-FNl"/>
-                                                                                    <outlet property="boutonTopLeft" destination="kht-TR-YQc" id="qdJ-WP-52B"/>
-                                                                                    <outlet property="boutonTopRight" destination="puI-kB-0Tk" id="WTQ-Jb-jJG"/>
+                                                                                    <outlet property="buttonBottomLeft" destination="XhJ-1x-weR" id="aYd-re-PzI"/>
+                                                                                    <outlet property="buttonBottomRight" destination="XhJ-1x-weR" id="l2x-V0-6Dl"/>
+                                                                                    <outlet property="buttonTopLeft" destination="kht-TR-YQc" id="Wtp-yv-kcb"/>
+                                                                                    <outlet property="buttonTopRight" destination="puI-kB-0Tk" id="72s-G7-AoT"/>
+                                                                                    <outlet property="firstSubStackView" destination="JIr-zo-lL8" id="DTZ-Ji-2ZE"/>
+                                                                                    <outlet property="maintStackView" destination="rSO-AB-4Ig" id="0bT-xb-eAd"/>
+                                                                                    <outlet property="secondSubStackView" destination="3hL-PT-KAa" id="S3M-j4-Hej"/>
                                                                                 </connections>
                                                                             </view>
                                                                         </subviews>
                                                                     </stackView>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="00o-Rm-ZHa">
-                                                                        <rect key="frame" x="370" y="105" width="50" height="31"/>
+                                                                        <rect key="frame" x="125" y="349" width="30" height="51"/>
                                                                         <subviews>
                                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-3" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-Mu-wP4">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
@@ -179,7 +182,7 @@ to share</string>
                                                                                 </subviews>
                                                                             </stackView>
                                                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="bottom arrow" translatesAutoresizingMaskIntoConstraints="NO" id="LIR-X7-UZ9">
-                                                                                <rect key="frame" x="30" y="0.0" width="20" height="31"/>
+                                                                                <rect key="frame" x="0.0" y="31" width="30" height="20"/>
                                                                                 <variation key="heightClass=compact" image="right arrow"/>
                                                                             </imageView>
                                                                         </subviews>
@@ -208,6 +211,7 @@ to share</string>
                                                                 </variation>
                                                             </stackView>
                                                         </subviews>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstItem="rub-zY-JYz" firstAttribute="centerX" secondItem="jo1-ra-BOr" secondAttribute="centerX" id="KT3-vM-I1z"/>
                                                             <constraint firstItem="rub-zY-JYz" firstAttribute="top" secondItem="jo1-ra-BOr" secondAttribute="top" constant="10" id="MDP-xw-ffo"/>
@@ -230,20 +234,34 @@ to share</string>
                                                                 <include reference="uge-gk-8dD"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="PJD-Xw-RIu" appends="YES" id="nU9-vy-ILl"/>
+                                                        </connections>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0S7-OA-rkH">
-                                                <rect key="frame" x="483" y="0.0" width="65" height="261"/>
+                                                <rect key="frame" x="0.0" y="424" width="300" height="65"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-sM-8gG" customClass="ControlContainableScrollView" customModule="Instagrid" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="261"/>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-sM-8gG" customClass="ControlContainableScrollView" customModule="Instagrid" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="65"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-N0-HSf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="65" height="365"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="665" height="65"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-Jp-NcV" customClass="ColorPickerButton" customModule="Instagrid" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
+                                                                        <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="hBS-Jp-NcV" secondAttribute="height" multiplier="1:1" id="2xk-Ca-QiT"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
+                                                                        <connections>
+                                                                            <action selector="showColorSliders" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhy-tF-m2W"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="Kb3-qf-thL" secondAttribute="height" multiplier="1:1" id="Fdz-95-2nF"/>
                                                                         </constraints>
@@ -252,10 +270,11 @@ to share</string>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="didTapTwoPhotosTopButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI2-5Z-0LF"/>
+                                                                            <action selector="shareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuI-Hh-Fa5"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G65-KZ-B5c" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="75" width="65" height="65"/>
+                                                                        <rect key="frame" x="150" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="G65-KZ-B5c" secondAttribute="height" multiplier="1:1" id="yyy-yS-ZrU"/>
                                                                         </constraints>
@@ -265,7 +284,7 @@ to share</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Mn-GOv" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="150" width="65" height="65"/>
+                                                                        <rect key="frame" x="225" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="zJr-Mn-GOv" secondAttribute="height" multiplier="1:1" id="7mZ-ca-S4W"/>
                                                                         </constraints>
@@ -275,7 +294,7 @@ to share</string>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-97-rxT" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="225" width="65" height="65"/>
+                                                                        <rect key="frame" x="300" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="EM9-97-rxT" secondAttribute="height" multiplier="1:1" id="Fas-Jy-qYX"/>
                                                                         </constraints>
@@ -284,15 +303,52 @@ to share</string>
                                                                             <action selector="didTapTwoPhotosButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUg-W6-pGU"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-Jp-NcV" customClass="ColorPickerButton" customModule="Instagrid" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="300" width="65" height="65"/>
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbP-cq-98u" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="375" y="0.0" width="65" height="65"/>
                                                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" secondItem="hBS-Jp-NcV" secondAttribute="height" multiplier="1:1" id="2xk-Ca-QiT"/>
+                                                                            <constraint firstAttribute="width" secondItem="TbP-cq-98u" secondAttribute="height" multiplier="1:1" id="wM6-Jj-bNv"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
+                                                                        <state key="normal" backgroundImage="two photos vertical layout"/>
                                                                         <connections>
-                                                                            <action selector="showColorSliders" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhy-tF-m2W"/>
+                                                                            <action selector="didTapTwoPhotosVerticalButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yqy-u4-spN"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTq-EO-rqv" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="450" y="0.0" width="65" height="65"/>
+                                                                        <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="vTq-EO-rqv" secondAttribute="height" multiplier="1:1" id="Ck3-8j-O8M"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
+                                                                        <state key="normal" backgroundImage="two photos left"/>
+                                                                        <connections>
+                                                                            <action selector="didTapTwoPhotosLeftButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0k-Rj-p9n"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMH-GL-hGQ" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="525" y="0.0" width="65" height="65"/>
+                                                                        <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="GMH-GL-hGQ" secondAttribute="height" multiplier="1:1" id="Ujw-F5-nmq"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
+                                                                        <state key="normal" backgroundImage="two photos right"/>
+                                                                        <connections>
+                                                                            <action selector="didTapTwoPhotosRightButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yox-Lc-rVJ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-Gi-Ah6" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                        <rect key="frame" x="600" y="0.0" width="65" height="65"/>
+                                                                        <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" secondItem="UNq-Gi-Ah6" secondAttribute="height" multiplier="1:1" id="fg4-AI-Y88"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
+                                                                        <state key="normal" backgroundImage="on photo layout"/>
+                                                                        <connections>
+                                                                            <action selector="didTapOnePhotoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="1pv-ff-Swz"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -332,25 +388,25 @@ to share</string>
                                 </subviews>
                             </stackView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQH-OE-3Dj">
-                                <rect key="frame" x="0.0" y="171" width="568" height="149"/>
+                                <rect key="frame" x="0.0" y="419" width="320" height="149"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YhW-PL-rH6">
-                                        <rect key="frame" x="10" y="10" width="548" height="129"/>
+                                        <rect key="frame" x="10" y="10" width="300" height="129"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="R8b-vC-eeS">
-                                                <rect key="frame" x="0.0" y="0.0" width="548" height="129"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="129"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="WN9-KN-35F">
-                                                        <rect key="frame" x="0.0" y="0.0" width="548" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQq-YN-RIt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="4" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="17"/>
                                                                 <color key="textColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Py4-MY-XHX">
-                                                                <rect key="frame" x="5" y="0.0" width="545" height="31"/>
+                                                                <rect key="frame" x="1" y="0.0" width="301" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="vvr-2Y-gJo"/>
@@ -359,16 +415,16 @@ to share</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="8Ci-Ce-fDK">
-                                                        <rect key="frame" x="0.0" y="33" width="548" height="30"/>
+                                                        <rect key="frame" x="0.0" y="33" width="300" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omh-j7-rXU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="8.5" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="17"/>
                                                                 <color key="textColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="101" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="A7L-X3-yNs">
-                                                                <rect key="frame" x="9.5" y="0.0" width="540.5" height="31"/>
+                                                                <rect key="frame" x="1" y="0.0" width="301" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="c4g-eI-s71"/>
@@ -377,7 +433,7 @@ to share</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gcQ-Xu-bez">
-                                                        <rect key="frame" x="0.0" y="66" width="548" height="30"/>
+                                                        <rect key="frame" x="0.0" y="66" width="300" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftE-XO-CtB">
                                                                 <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
@@ -386,7 +442,7 @@ to share</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="154" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="J9Z-md-dip">
-                                                                <rect key="frame" x="1" y="0.0" width="549" height="31"/>
+                                                                <rect key="frame" x="1" y="0.0" width="301" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
                                                                     <action selector="blueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="whK-uX-7Jq"/>
@@ -395,17 +451,17 @@ to share</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GHZ-5P-FXO">
-                                                        <rect key="frame" x="0.0" y="99" width="548" height="30"/>
+                                                        <rect key="frame" x="0.0" y="99" width="300" height="30"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ga-SR-iVW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                                 <state key="normal" title="reset"/>
                                                                 <connections>
                                                                     <action selector="resetColors" destination="BYZ-38-t0r" eventType="touchUpInside" id="XzK-a2-Z2a"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGJ-jH-uaM">
-                                                                <rect key="frame" x="274" y="0.0" width="274" height="30"/>
+                                                                <rect key="frame" x="150" y="0.0" width="150" height="30"/>
                                                                 <state key="normal" title="close"/>
                                                                 <connections>
                                                                     <action selector="closeColorSliders" destination="BYZ-38-t0r" eventType="touchUpInside" id="SbS-hk-a7A"/>
@@ -442,22 +498,27 @@ to share</string>
                     </view>
                     <connections>
                         <outlet property="blueSlider" destination="J9Z-md-dip" id="KTM-k1-hhu"/>
-                        <outlet property="buttonBottomLeft" destination="Sn1-7Y-sfJ" id="jyW-zI-faX"/>
-                        <outlet property="buttonBottomRight" destination="XhJ-1x-weR" id="9vB-SS-9K0"/>
-                        <outlet property="buttonTopLeft" destination="kht-TR-YQc" id="LMB-wp-n79"/>
-                        <outlet property="buttonTopRight" destination="puI-kB-0Tk" id="SEE-8a-ibE"/>
                         <outlet property="colorPickerButton" destination="hBS-Jp-NcV" id="uep-rz-0x3"/>
                         <outlet property="colorSliders" destination="kQH-OE-3Dj" id="9cx-65-9rv"/>
                         <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="nUU-Ml-Y55"/>
                         <outlet property="greenSlider" destination="A7L-X3-yNs" id="BHf-Yo-q4v"/>
+                        <outlet property="onePhotosButton" destination="UNq-Gi-Ah6" id="Av2-rK-BkJ"/>
                         <outlet property="photoView" destination="Nht-vk-aPT" id="44J-vF-cBj"/>
                         <outlet property="redSlider" destination="Py4-MY-XHX" id="TZo-GY-LBj"/>
                         <outlet property="twoPhotosBottomButton" destination="G65-KZ-B5c" id="QTX-bm-Aaq"/>
                         <outlet property="twoPhotosButton" destination="EM9-97-rxT" id="WPS-UP-6cA"/>
+                        <outlet property="twoPhotosLeftButton" destination="vTq-EO-rqv" id="48W-fu-Lhj"/>
+                        <outlet property="twoPhotosRightButton" destination="GMH-GL-hGQ" id="yF6-Py-aT3"/>
                         <outlet property="twoPhotosTopButton" destination="Kb3-qf-thL" id="Esc-3m-0h0"/>
+                        <outlet property="twoPhotosVerticalButton" destination="TbP-cq-98u" id="L8C-JL-28b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="PJD-Xw-RIu">
+                    <connections>
+                        <action selector="dragPhotoView:" destination="BYZ-38-t0r" id="5XG-uS-Tqi"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.4384236453202" y="130.40000000000001"/>
         </scene>
@@ -466,6 +527,7 @@ to share</string>
         <image name="bottom arrow" width="20" height="20"/>
         <image name="four photos layout" width="80" height="80"/>
         <image name="left arrow" width="20" height="20"/>
+        <image name="on photo layout" width="80" height="80"/>
         <image name="plusSign" width="50" height="50"/>
         <image name="right arrow" width="20" height="20"/>
         <image name="top arrow" width="20" height="20"/>
@@ -473,6 +535,9 @@ to share</string>
         <image name="trashcanLid" width="80" height="20"/>
         <image name="two photos down" width="80" height="80"/>
         <image name="two photos layout" width="80" height="80"/>
+        <image name="two photos left" width="80" height="80"/>
+        <image name="two photos right" width="80" height="80"/>
         <image name="two photos up" width="80" height="80"/>
+        <image name="two photos vertical layout" width="80" height="80"/>
     </resources>
 </document>

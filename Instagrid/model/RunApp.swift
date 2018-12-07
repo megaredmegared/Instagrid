@@ -7,14 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
 class RunApp {
+
     
-    func share() {
-        
+    enum actionOnPhotos {
+        case share, trash
     }
     
-    func resetLayout() {
+    // TODO: erase this lines
+    func shareImage() {
+        let activityVC = UIActivityViewController(activityItems: [#imageLiteral(resourceName: "trashcan")], applicationActivities: nil)
+        activityVC.present(activityVC, animated: true, completion: nil)
+        //activityVC.dismiss(animated: true, completion: nil)
+        print("******** It works ***********")
         
     }
 
