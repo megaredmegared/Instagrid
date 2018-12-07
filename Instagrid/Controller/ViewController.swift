@@ -110,7 +110,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         pickAnImageInLibrary()
         photoButtonTapped = .topRightButton
     }
-    @IBAction func didTapLoadBottomLeft(_ sender: PhotoButton) {
+    @IBAction func didTapLoadBottomLeft(_ sender: Any) {
         pickAnImageInLibrary()
         photoButtonTapped = .bottomLeftButton
     }
@@ -335,8 +335,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
+
+    
+    
+   
+    
     func sharePhoto() {
-        let activityVC = UIActivityViewController(activityItems: [#imageLiteral(resourceName: "trashcan")], applicationActivities: nil)
+        // convert UIView
+        let imageToShare: UIImage = UIImage(view: photoView)
+        
+        let activityVC = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
         self.present(activityVC, animated: true, completion: nil)
         print("******** It works ***********")
     }
@@ -347,12 +355,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
     }
     
-    // TODO: test button for sharing image
-    
-    @IBAction func shareButton(_ sender: LayoutButton) {
-        sharePhoto()
-        
-    }
     
     
     

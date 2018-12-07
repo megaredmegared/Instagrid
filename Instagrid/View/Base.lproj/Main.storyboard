@@ -148,7 +148,7 @@ to share</string>
                                                                                     <constraint firstAttribute="bottom" secondItem="rSO-AB-4Ig" secondAttribute="bottom" constant="10" id="rp4-y6-tfl"/>
                                                                                 </constraints>
                                                                                 <connections>
-                                                                                    <outlet property="buttonBottomLeft" destination="XhJ-1x-weR" id="aYd-re-PzI"/>
+                                                                                    <outlet property="buttonBottomLeft" destination="Sn1-7Y-sfJ" id="b0i-fc-p29"/>
                                                                                     <outlet property="buttonBottomRight" destination="XhJ-1x-weR" id="l2x-V0-6Dl"/>
                                                                                     <outlet property="buttonTopLeft" destination="kht-TR-YQc" id="Wtp-yv-kcb"/>
                                                                                     <outlet property="buttonTopRight" destination="puI-kB-0Tk" id="72s-G7-AoT"/>
@@ -270,7 +270,6 @@ to share</string>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="didTapTwoPhotosTopButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI2-5Z-0LF"/>
-                                                                            <action selector="shareButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DuI-Hh-Fa5"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G65-KZ-B5c" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">

@@ -16,13 +16,6 @@ class RunApp {
         case share, trash
     }
     
-    // TODO: erase this lines
-    func shareImage() {
-        let activityVC = UIActivityViewController(activityItems: [#imageLiteral(resourceName: "trashcan")], applicationActivities: nil)
-        activityVC.present(activityVC, animated: true, completion: nil)
-        //activityVC.dismiss(animated: true, completion: nil)
-        print("******** It works ***********")
-        
-    }
+ 
 
 }
