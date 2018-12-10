@@ -12,14 +12,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     @IBOutlet weak var photoView: PhotosView!
-    @IBOutlet weak var twoPhotosTopButton: LayoutButton!
-    @IBOutlet weak var fourPhotosButton: LayoutButton!
-    @IBOutlet weak var twoPhotosBottomButton: LayoutButton!
-    @IBOutlet weak var twoPhotosButton: LayoutButton!
-    @IBOutlet weak var twoPhotosVerticalButton: LayoutButton!
-    @IBOutlet weak var twoPhotosLeftButton: LayoutButton!
-    @IBOutlet weak var twoPhotosRightButton: LayoutButton!
-    @IBOutlet weak var onePhotosButton: LayoutButton!
+    @IBOutlet weak var twoPhotosTopButton: UIButton!
+    @IBOutlet weak var fourPhotosButton: UIButton!
+    @IBOutlet weak var twoPhotosBottomButton: UIButton!
+    @IBOutlet weak var twoPhotosButton: UIButton!
+    @IBOutlet weak var twoPhotosVerticalButton: UIButton!
+    @IBOutlet weak var twoPhotosLeftButton: UIButton!
+    @IBOutlet weak var twoPhotosRightButton: UIButton!
+    @IBOutlet weak var onePhotosButton: UIButton!
     @IBOutlet weak var colorSliders: UIView!
     @IBOutlet weak var colorPickerButton: UIButton!
     @IBOutlet weak var redSlider: UISlider!
@@ -29,27 +29,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         startInstagrid()
     }
     
+    // MARK: - LOAD PHOTO FROM LIBRARY IN THE LAYOUT ------
     
-    var runApp = RunApp()
+    /// photo button that is tapped
     
-    /// Load photo from library in the layout
-    
-    let imagePicker = UIImagePickerController()
-    
-    /// All cases of buttons
-    
-    enum PhotoButtonTapped {
-        case topLeftButton, topRightButton, bottomLeftButton, bottomRightButton
-    }
-    
-    /// assign button tapped to a variable
-    
-    var photoButtonTapped: PhotoButtonTapped = .topLeftButton // lazy weak ????
+    var photoButtonTapped: PhotoButtonTapped = .topLeftButton //TODO: lazy weak ????
     
     /// assign image to the button tapped
     
@@ -77,7 +64,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    /// Pick an image into the photo library
+    /// Picked image from the photo library
+    
+    let imagePicker = UIImagePickerController()
+    
+    /// Pick an image from the photo library
     
     func pickAnImageInLibrary() {
         imagePicker.allowsEditing = false
@@ -100,7 +91,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    /// Actions to import images on buttons
+    /// import image from the library in the layout for the tapped button
     
     @IBAction func didTapLoadTopLeftPhoto(_ sender: Any) {
         pickAnImageInLibrary()
@@ -119,13 +110,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         photoButtonTapped = .bottomRightButton
     }
     
-    /// Mark layoutButton has actived with a check mark image
+    // MARK: - ASSIGN CHECKMARK TO THE CORRESPONDING ACTIVE LAYOUT ------
     
-    func activeViewButton(is layout: PhotosView.Layout) {
+    /// Mark layoutButton has actived with a checkmark image
+    
+    func activeViewButton(is layout: Layout) {
         
         photoView.layout = layout
         
-        var button: LayoutButton
+        var button: UIButton
         
         switch layout {
         case .twoPhotosTop :
@@ -155,66 +148,46 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let buttons = [twoPhotosTopButton, twoPhotosBottomButton, fourPhotosButton, twoPhotosButton, twoPhotosVerticalButton, twoPhotosLeftButton, twoPhotosRightButton, onePhotosButton]
         
+        /// reset all buttons checkmark image
         for i in buttons {
             if i != nil {
                 i?.setImage(nil, for: .normal)
             }
         }
         
+        /// set the button selected with a checkmark
         button.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
         button.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
         
     }
-    
-    /// Buttons to choose the photo layout
-    
     @IBAction func didTapTwoPhotosTopButton() {
         activeViewButton(is: .twoPhotosTop)
     }
-    
-    
-    @IBAction func didTapFourPhotosButton() {
-        activeViewButton(is: .fourPhotos)
-    }
-    
     @IBAction func didTapTwoPhotosBottomButton() {
         activeViewButton(is: .twoPhotosBottom)
     }
-    
+    @IBAction func didTapFourPhotosButton() {
+        activeViewButton(is: .fourPhotos)
+    }
     @IBAction func didTapTwoPhotosButton() {
         activeViewButton(is: .twoPhotos)
     }
-    
     @IBAction func didTapTwoPhotosVerticalButton() {
         activeViewButton(is: .twoPhotosVertical)
     }
-    
     @IBAction func didTapTwoPhotosLeftButton() {
         activeViewButton(is: .twoPhotoLeft)
     }
-    
     @IBAction func didTapTwoPhotosRightButton() {
         activeViewButton(is: .twoPhotoRight)
     }
-    
     @IBAction func didTapOnePhotoButton() {
         activeViewButton(is: .onePhoto)
     }
     
     
     
-    @IBAction func showColorSliders() {
-        colorSliders.isHidden = false
-    }
-    
-    /// Set background color with sliders -----------------------------------------------------------------------
-    
-    // TODO: set variable to default value
-    
-    var red: CGFloat = 4 / 255
-    var green: CGFloat = 101 / 255
-    var blue: CGFloat = 154 / 255
-    var alpha: CGFloat = 1
+    // MARK: - SET THE BACKGROUND COLOR WITH SLIDERS ------
     
     /// Default values for the layout background
     
@@ -223,10 +196,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let blueDefault: CGFloat = 154 / 255
     let aplhaDefault: CGFloat = 1
     
+    // TODO: set variable to default value ????
+    
+    var red: CGFloat = 4 / 255
+    var green: CGFloat = 101 / 255
+    var blue: CGFloat = 154 / 255
+    var alpha: CGFloat = 1
+    
+    /// set and sync the background color RGB values with the sliders values
+    
     func setBackgroundColor() {
         photoView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
         colorPickerButton.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
+    
+    /// sliders for RGB values
     
     @IBAction func redSlider(_ sender: UISlider) {
         red = CGFloat(sender.value) / 255
@@ -249,7 +233,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         colorPickerButton.backgroundColor = UIColor(red: redDefault, green: greenDefault, blue: blueDefault, alpha: aplhaDefault)
     }
     
-    /// Reset color sliders to there initial values
+    /// Reset color sliders and background color to there initial values
     
     @IBAction func resetColors() {
         resetBackgroundColor()
@@ -264,102 +248,198 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         colorSliders.isHidden = true
     }
     
-    /// Drag photoview to send the photos or trash them -------------------------------------------------
+    /// show color sliders
+    
+    @IBAction func didTapColorPickerButton() {
+        colorSliders.isHidden = false
+    }
+    
+    
+    // MARK: - DRAG PHOTOVIEW TO SHARE THE PHOTOS OR TRASH THEM ------
+    
+    /// drag photo view and share or trash them
     
     @IBAction func dragPhotoView(_ sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began, .changed:
-            // if photos charged
             transformPhotoView(gesture: sender)
         case .cancelled, .ended:
-            sendOrTrashPhotoView()
+            shareOrTrashPhotoView()
         default:
             break
         }
     }
     
+    /// asked action on photo layout
+    
+    var actionOnPhotos: ActionOnPhotos = .inPlace
+    
+    /// track the gesture to move the photoView
+    
     private func transformPhotoView(gesture: UIPanGestureRecognizer) {
         
         let translation = gesture.translation(in: photoView)
         var translationTransform: CGAffineTransform
-        let screenHight = UIScreen.main.bounds.height
-        let screenWidth = UIScreen.main.bounds.width
-        
-        func resetPhotosImported() {
-            photoView.buttonTopLeft.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
-            photoView.buttonTopRight.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
-            photoView.buttonBottomLeft.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
-            photoView.buttonBottomRight.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
-        }
         
         /// detect device orientation for gesture direction
         
         if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
             
+            /// landscape mode
             translationTransform = CGAffineTransform(translationX: translation.x, y: 0)
-            
             photoView.transform = translationTransform
             
-            /// landscape mode
+            /// drag right
             if translation.x > 150 {
-                // erase
-                translationTransform = CGAffineTransform(translationX: screenWidth, y: 0)
-                resetPhotosImported()
-                
-                
-                
-            } else if translation.x > -150 {
-                
-                translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
-                // send photo
-                
+                actionOnPhotos = .trash
+                /// drag left
+            } else if translation.x < -150 {
+                actionOnPhotos = .share
             }
-            /// portrait mode
+            
         } else {
+            /// portrait mode
             translationTransform = CGAffineTransform(translationX: 0, y: translation.y)
             photoView.transform = translationTransform
+            /// drag down
             if translation.y > 150 {
-                // erase
-                translationTransform = CGAffineTransform(translationX: 0, y: screenHight)
-                resetPhotosImported()
-                
-                
-            } else if translation.y > -150 {
-                
-                translationTransform = CGAffineTransform(translationX: 0, y: -screenHight)
-                // send photo
-                // sharePhoto()
-                
+                actionOnPhotos = .trash
+                /// drag up
+            } else if translation.y < -150 {
+                actionOnPhotos = .share
+                /// not enought dragging to trigger something
+            } else if translation.y < 150 || translation.y > -150 {
+                actionOnPhotos = .inPlace
             }
+            
         }
-        
     }
     
-
-    
-    
-   
+    /// sharing photo service
     
     func sharePhoto() {
-        // convert UIView
-        let imageToShare: UIImage = UIImage(view: photoView)
         
-        let activityVC = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
-        self.present(activityVC, animated: true, completion: nil)
-        print("******** It works ***********")
+        /// check that the layout is full of photo
+        if (photoView.buttonTopLeft.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photoView.buttonTopLeft.isHidden == true) && (photoView.buttonTopRight.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photoView.buttonTopRight.isHidden == true) && (photoView.buttonBottomLeft.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photoView.buttonBottomLeft.isHidden == true) && (photoView.buttonBottomRight.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photoView.buttonBottomRight.isHidden == true) {
+            
+            /// construct the image to share
+            let imageToShare: UIImage = UIImage(view: photoView)
+            
+            let activityVC = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
+            self.present(activityVC, animated: true, completion: nil)
+            print("******** It works ***********")
+        } else {
+            /// alert if photos are missing
+            let alert = UIAlertController(title: "Not ready for sharing", message: "photos are missing", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                switch action.style{
+                case .default:
+                    print("default")
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                }}))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
-    private func sendOrTrashPhotoView() {
+    /// reset photo in layout
+    
+    func resetPhotosImported() {
+        photoView.buttonTopLeft.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+        photoView.buttonTopRight.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+        photoView.buttonBottomLeft.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+        photoView.buttonBottomRight.setImage(#imageLiteral(resourceName: "plusSign"), for: .normal)
+    }
+    
+    
+    
+    
+    let screenHight = UIScreen.main.bounds.height
+    let screenWidth = UIScreen.main.bounds.width
+    
+    
+    
+    private func shareOrTrashPhotoView() {
+        var translationTransform: CGAffineTransform
         
+        if UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight {
+            /// landscape mode
+            if actionOnPhotos == .share {
+                translationTransform = CGAffineTransform(translationX: -screenWidth, y: 0)
+                print("test UP")
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.photoView.transform = translationTransform
+                }) { (success) in
+                    if success {
+                        self.sharePhoto()
+                        self.showPhotoView()
+                    }
+                }
+                
+            } else if actionOnPhotos == .trash {
+                translationTransform = CGAffineTransform(translationX: screenWidth, y: 0)
+                print("test DOWN")
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.photoView.transform = translationTransform
+                }) { (success) in
+                    if success {
+                        self.resetPhotosImported()
+                        self.showPhotoView()
+                    }
+                }
+            } else if actionOnPhotos == .inPlace {
+                translationTransform = CGAffineTransform(translationX: 0, y: 0)
+                print("test nothing")
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.photoView.transform = translationTransform
+                })
+            }
+        } else {
+            if actionOnPhotos == .share {
+                translationTransform = CGAffineTransform(translationX: 0, y: -screenHight)
+                print("test UP")
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.photoView.transform = translationTransform
+                }) { (success) in
+                    if success {
+                        self.sharePhoto()
+                        self.showPhotoView()
+                    }
+                }
+                
+            } else if actionOnPhotos == .trash {
+                translationTransform = CGAffineTransform(translationX: 0, y: screenHight)
+                print("test DOWN")
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.photoView.transform = translationTransform
+                }) { (success) in
+                    if success {
+                        self.resetPhotosImported()
+                        self.showPhotoView()
+                    }
+                }
+            } else if actionOnPhotos == .inPlace {
+                translationTransform = CGAffineTransform(translationX: 0, y: 0)
+                print("test nothing")
+                UIView.animate(withDuration: 0.3, animations: {                    self.photoView.transform = translationTransform
+                })
+            }
+        }
+    }
+    
+    private func showPhotoView() {
         photoView.transform = .identity
-        
+        photoView.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.photoView.transform = .identity
+        }, completion: nil)
     }
     
-    
-    
-    
-    
-    /// Start the app -----------------------------------------------------------------------
+    // MARK: - START THE APP ------
     
     private func startInstagrid() {
         activeViewButton(is: .twoPhotosTop)

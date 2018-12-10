@@ -14,6 +14,7 @@ class PhotosView: UIView {
     @IBOutlet private var firstSubStackView: UIStackView!
     @IBOutlet private var secondSubStackView: UIStackView!
     
+    // MARK: - Shadow under the frame of the photo layout
     
     /// Shadow under the frame of the photo layout
     
@@ -24,20 +25,17 @@ class PhotosView: UIView {
         super.layer.shadowOffset = CGSize(width: 0, height: 2)
         super.layer.shadowRadius = 4
         // TODO: Why not on top ?
-        super.layer.zPosition =  CGFloat.greatestFiniteMagnitude
+        super.layer.zPosition = CGFloat.greatestFiniteMagnitude
     }
     
-    /// Every possible photos layouts cases
-    
-    enum Layout {
-        case twoPhotosTop, twoPhotosBottom, fourPhotos, twoPhotos, twoPhotosVertical, twoPhotoLeft, twoPhotoRight, onePhoto
-    }
     
     var layout: Layout = .twoPhotosTop {
         didSet {
             setLayout(layout)
         }
     }
+    
+    // MARK: - Layouts settings
     
     /// Layouts settings
     

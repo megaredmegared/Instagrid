@@ -16,4 +16,5 @@ extension UIImage {
         UIGraphicsEndImageContext()
         self.init(cgImage: image!.cgImage!)
     }
+
 }

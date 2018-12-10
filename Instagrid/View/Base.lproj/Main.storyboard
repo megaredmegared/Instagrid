@@ -249,7 +249,7 @@ to share</string>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-N0-HSf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="665" height="65"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-Jp-NcV" customClass="ColorPickerButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-Jp-NcV">
                                                                         <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -257,10 +257,10 @@ to share</string>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
                                                                         <connections>
-                                                                            <action selector="showColorSliders" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhy-tF-m2W"/>
+                                                                            <action selector="didTapColorPickerButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="xEC-XZ-rQc"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kb3-qf-thL">
                                                                         <rect key="frame" x="75" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="Kb3-qf-thL" secondAttribute="height" multiplier="1:1" id="Fdz-95-2nF"/>
@@ -269,40 +269,40 @@ to share</string>
                                                                             <color key="titleColor" red="0.01209461115" green="1" blue="0.063116314780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="didTapTwoPhotosTopButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI2-5Z-0LF"/>
+                                                                            <action selector="didTapTwoPhotosTopButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6H-vF-b59"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G65-KZ-B5c" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G65-KZ-B5c">
                                                                         <rect key="frame" x="150" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="G65-KZ-B5c" secondAttribute="height" multiplier="1:1" id="yyy-yS-ZrU"/>
                                                                         </constraints>
                                                                         <state key="normal" backgroundImage="two photos down"/>
                                                                         <connections>
-                                                                            <action selector="didTapTwoPhotosBottomButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="WyX-eP-mC8"/>
+                                                                            <action selector="didTapTwoPhotosBottomButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVQ-qj-vqv"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Mn-GOv" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJr-Mn-GOv">
                                                                         <rect key="frame" x="225" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="zJr-Mn-GOv" secondAttribute="height" multiplier="1:1" id="7mZ-ca-S4W"/>
                                                                         </constraints>
                                                                         <state key="normal" backgroundImage="four photos layout"/>
                                                                         <connections>
-                                                                            <action selector="didTapFourPhotosButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="98A-fP-bSI"/>
+                                                                            <action selector="didTapFourPhotosButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="kls-z0-fR4"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-97-rxT" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EM9-97-rxT">
                                                                         <rect key="frame" x="300" y="0.0" width="65" height="65"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="EM9-97-rxT" secondAttribute="height" multiplier="1:1" id="Fas-Jy-qYX"/>
                                                                         </constraints>
                                                                         <state key="normal" backgroundImage="two photos layout"/>
                                                                         <connections>
-                                                                            <action selector="didTapTwoPhotosButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="jUg-W6-pGU"/>
+                                                                            <action selector="didTapTwoPhotosButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xY-NL-YbL"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbP-cq-98u" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbP-cq-98u">
                                                                         <rect key="frame" x="375" y="0.0" width="65" height="65"/>
                                                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -311,10 +311,10 @@ to share</string>
                                                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
                                                                         <state key="normal" backgroundImage="two photos vertical layout"/>
                                                                         <connections>
-                                                                            <action selector="didTapTwoPhotosVerticalButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yqy-u4-spN"/>
+                                                                            <action selector="didTapTwoPhotosVerticalButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="ALk-6z-FuW"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTq-EO-rqv" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTq-EO-rqv">
                                                                         <rect key="frame" x="450" y="0.0" width="65" height="65"/>
                                                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -323,10 +323,10 @@ to share</string>
                                                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
                                                                         <state key="normal" backgroundImage="two photos left"/>
                                                                         <connections>
-                                                                            <action selector="didTapTwoPhotosLeftButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0k-Rj-p9n"/>
+                                                                            <action selector="didTapTwoPhotosLeftButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="E26-wg-9kh"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMH-GL-hGQ" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMH-GL-hGQ">
                                                                         <rect key="frame" x="525" y="0.0" width="65" height="65"/>
                                                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -335,10 +335,10 @@ to share</string>
                                                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
                                                                         <state key="normal" backgroundImage="two photos right"/>
                                                                         <connections>
-                                                                            <action selector="didTapTwoPhotosRightButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yox-Lc-rVJ"/>
+                                                                            <action selector="didTapTwoPhotosRightButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kys-My-v1r"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-Gi-Ah6" customClass="LayoutButton" customModule="Instagrid" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-Gi-Ah6">
                                                                         <rect key="frame" x="600" y="0.0" width="65" height="65"/>
                                                                         <color key="backgroundColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
@@ -347,7 +347,7 @@ to share</string>
                                                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="20"/>
                                                                         <state key="normal" backgroundImage="on photo layout"/>
                                                                         <connections>
-                                                                            <action selector="didTapOnePhotoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="1pv-ff-Swz"/>
+                                                                            <action selector="didTapOnePhotoButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="qHv-bV-k8n"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -499,7 +499,7 @@ to share</string>
                         <outlet property="blueSlider" destination="J9Z-md-dip" id="KTM-k1-hhu"/>
                         <outlet property="colorPickerButton" destination="hBS-Jp-NcV" id="uep-rz-0x3"/>
                         <outlet property="colorSliders" destination="kQH-OE-3Dj" id="9cx-65-9rv"/>
-                        <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="nUU-Ml-Y55"/>
+                        <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="YyS-Lp-UTN"/>
                         <outlet property="greenSlider" destination="A7L-X3-yNs" id="BHf-Yo-q4v"/>
                         <outlet property="onePhotosButton" destination="UNq-Gi-Ah6" id="Av2-rK-BkJ"/>
                         <outlet property="photoView" destination="Nht-vk-aPT" id="44J-vF-cBj"/>

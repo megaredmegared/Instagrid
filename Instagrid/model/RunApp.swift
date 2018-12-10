@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import UIKit
+
 
 class RunApp {
 
@@ -15,6 +15,7 @@ class RunApp {
     enum actionOnPhotos {
         case share, trash
     }
+    
     
  
 

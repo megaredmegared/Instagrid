@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LayoutButton: UIButton {
+class LayoutButtons: UIView {
 
 }
 

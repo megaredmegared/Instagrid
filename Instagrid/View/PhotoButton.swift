@@ -16,6 +16,12 @@ class PhotoButton: UIButton {
         super.layoutSubviews()
         super.layer.cornerRadius = 6
     }
+//    var translationTransform: CGAffineTransform = CGAffineTransform.init(scaleX: 20, y: 20)
+//    func animeButton() {
+//        UIButton.animate(withDuration: 1) {
+//            self.transform = self.translationTransform
+//        }
+//    }
    
 
 
