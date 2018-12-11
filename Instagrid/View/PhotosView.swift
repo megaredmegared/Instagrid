@@ -24,8 +24,7 @@ class PhotosView: UIView {
         super.layer.shadowOpacity = 0.5
         super.layer.shadowOffset = CGSize(width: 0, height: 2)
         super.layer.shadowRadius = 4
-        // TODO: Why not on top ?
-        super.layer.zPosition = CGFloat.greatestFiniteMagnitude
+        super.layer.zPosition = 1
     }
     
     

@@ -501,8 +501,9 @@ to share</string>
                         <outlet property="colorSliders" destination="kQH-OE-3Dj" id="9cx-65-9rv"/>
                         <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="YyS-Lp-UTN"/>
                         <outlet property="greenSlider" destination="A7L-X3-yNs" id="BHf-Yo-q4v"/>
+                        <outlet property="layoutButtons" destination="8Ug-sM-8gG" id="IT2-No-fMv"/>
                         <outlet property="onePhotosButton" destination="UNq-Gi-Ah6" id="Av2-rK-BkJ"/>
-                        <outlet property="photoView" destination="Nht-vk-aPT" id="44J-vF-cBj"/>
+                        <outlet property="photosView" destination="Nht-vk-aPT" id="HJn-ru-w9Y"/>
                         <outlet property="redSlider" destination="Py4-MY-XHX" id="TZo-GY-LBj"/>
                         <outlet property="twoPhotosBottomButton" destination="G65-KZ-B5c" id="QTX-bm-Aaq"/>
                         <outlet property="twoPhotosButton" destination="EM9-97-rxT" id="WPS-UP-6cA"/>

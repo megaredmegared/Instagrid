@@ -14,9 +14,7 @@
 		4D33B63121A577EA00FD41A6 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B63021A577EA00FD41A6 /* ThirstySoftRegular.otf */; };
 		4D33B63321A577F700FD41A6 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D33B63221A577F700FD41A6 /* Delm-Medium.otf */; };
 		4D67B12221B6CE66000F34EE /* ControlContainableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D67B12121B6CE66000F34EE /* ControlContainableScrollView.swift */; };
-		4D6F733D21B144F9000248F5 /* LayoutButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F733C21B144F9000248F5 /* LayoutButtons.swift */; };
 		4D6F733F21B14532000248F5 /* PhotoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F733E21B14532000248F5 /* PhotoButton.swift */; };
-		4D6F734421B153D6000248F5 /* RunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6F734321B153D6000248F5 /* RunApp.swift */; };
 		4D8C86CC21BA9B7A001A20FF /* ExtensionsConvertImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C86CB21BA9B7A001A20FF /* ExtensionsConvertImage.swift */; };
 		4D8C86CE21BABCBA001A20FF /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C86CD21BABCBA001A20FF /* Layout.swift */; };
 		4D8C86D021BABD6A001A20FF /* PhotoButtonTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C86CF21BABD6A001A20FF /* PhotoButtonTapped.swift */; };
@@ -36,9 +34,7 @@
 		4D33B63021A577EA00FD41A6 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		4D33B63221A577F700FD41A6 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		4D67B12121B6CE66000F34EE /* ControlContainableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlContainableScrollView.swift; sourceTree = "<group>"; };
-		4D6F733C21B144F9000248F5 /* LayoutButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutButtons.swift; sourceTree = "<group>"; };
 		4D6F733E21B14532000248F5 /* PhotoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButton.swift; sourceTree = "<group>"; };
-		4D6F734321B153D6000248F5 /* RunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunApp.swift; sourceTree = "<group>"; };
 		4D8C86CB21BA9B7A001A20FF /* ExtensionsConvertImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsConvertImage.swift; sourceTree = "<group>"; };
 		4D8C86CD21BABCBA001A20FF /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		4D8C86CF21BABD6A001A20FF /* PhotoButtonTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButtonTapped.swift; sourceTree = "<group>"; };
@@ -90,7 +86,6 @@
 		4D6F734221B153AD000248F5 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				4D6F734321B153D6000248F5 /* RunApp.swift */,
 				4D8C86CD21BABCBA001A20FF /* Layout.swift */,
 				4DCB55AC21BD522800B8A045 /* ActionOnPhotos.swift */,
 				4D8C86CF21BABD6A001A20FF /* PhotoButtonTapped.swift */,
@@ -102,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				4D33B62221A5650300FD41A6 /* Main.storyboard */,
-				4D6F733C21B144F9000248F5 /* LayoutButtons.swift */,
 				4D6F733E21B14532000248F5 /* PhotoButton.swift */,
 				4D67B12121B6CE66000F34EE /* ControlContainableScrollView.swift */,
 				4DC95F2121B02E37001DFD3B /* PhotosView.swift */,
@@ -206,9 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D33B62121A5650300FD41A6 /* ViewController.swift in Sources */,
-				4D6F733D21B144F9000248F5 /* LayoutButtons.swift in Sources */,
 				4DC95F2221B02E37001DFD3B /* PhotosView.swift in Sources */,
-				4D6F734421B153D6000248F5 /* RunApp.swift in Sources */,
 				4D8C86CE21BABCBA001A20FF /* Layout.swift in Sources */,
 				4D67B12221B6CE66000F34EE /* ControlContainableScrollView.swift in Sources */,
 				4D6F733F21B14532000248F5 /* PhotoButton.swift in Sources */,
