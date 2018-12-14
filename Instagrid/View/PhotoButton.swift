@@ -10,19 +10,10 @@ import UIKit
 
 class PhotoButton: UIButton {
     
-    /// Round corner for the photos
+    /// Rounded corner for the photos
     
     override func layoutSubviews() {
         super.layoutSubviews()
         super.layer.cornerRadius = 6
     }
-//    var translationTransform: CGAffineTransform = CGAffineTransform.init(scaleX: 20, y: 20)
-//    func animeButton() {
-//        UIButton.animate(withDuration: 1) {
-//            self.transform = self.translationTransform
-//        }
-//    }
-   
-
-
 }

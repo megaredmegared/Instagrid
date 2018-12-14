@@ -18,7 +18,6 @@
 		4D8C86CC21BA9B7A001A20FF /* ExtensionsConvertImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C86CB21BA9B7A001A20FF /* ExtensionsConvertImage.swift */; };
 		4D8C86CE21BABCBA001A20FF /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C86CD21BABCBA001A20FF /* Layout.swift */; };
 		4D8C86D021BABD6A001A20FF /* PhotoButtonTapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8C86CF21BABD6A001A20FF /* PhotoButtonTapped.swift */; };
-		4DA011D221BABFA3001DA68A /* ExtensionViewControllerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA011D121BABFA3001DA68A /* ExtensionViewControllerAction.swift */; };
 		4DC0AA3321AC31F7000D9B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC0AA3221AC31F7000D9B76 /* Assets.xcassets */; };
 		4DC95F2221B02E37001DFD3B /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC95F2121B02E37001DFD3B /* PhotosView.swift */; };
 		4DCB55AD21BD522800B8A045 /* ActionOnPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB55AC21BD522800B8A045 /* ActionOnPhotos.swift */; };
@@ -38,7 +37,6 @@
 		4D8C86CB21BA9B7A001A20FF /* ExtensionsConvertImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsConvertImage.swift; sourceTree = "<group>"; };
 		4D8C86CD21BABCBA001A20FF /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		4D8C86CF21BABD6A001A20FF /* PhotoButtonTapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButtonTapped.swift; sourceTree = "<group>"; };
-		4DA011D121BABFA3001DA68A /* ExtensionViewControllerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewControllerAction.swift; sourceTree = "<group>"; };
 		4DC0AA3221AC31F7000D9B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DC95F2121B02E37001DFD3B /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 		4DCB55AC21BD522800B8A045 /* ActionOnPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnPhotos.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				4D33B62021A5650300FD41A6 /* ViewController.swift */,
-				4DA011D121BABFA3001DA68A /* ExtensionViewControllerAction.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,7 +201,6 @@
 				4D8C86CE21BABCBA001A20FF /* Layout.swift in Sources */,
 				4D67B12221B6CE66000F34EE /* ControlContainableScrollView.swift in Sources */,
 				4D6F733F21B14532000248F5 /* PhotoButton.swift in Sources */,
-				4DA011D221BABFA3001DA68A /* ExtensionViewControllerAction.swift in Sources */,
 				4D8C86CC21BA9B7A001A20FF /* ExtensionsConvertImage.swift in Sources */,
 				4DCB55AD21BD522800B8A045 /* ActionOnPhotos.swift in Sources */,
 				4D8C86D021BABD6A001A20FF /* PhotoButtonTapped.swift in Sources */,
