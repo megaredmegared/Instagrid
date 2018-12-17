@@ -21,7 +21,7 @@ extension UIImage {
 //        UIGraphicsEndImageContext()
 //        self.init(cgImage: image!.cgImage!)
 //    }
-    
+//    
     /// resize image in relation to his smallest side
     
     class func resizeImage(image: UIImage, newMinSideSize: CGFloat) -> UIImage {

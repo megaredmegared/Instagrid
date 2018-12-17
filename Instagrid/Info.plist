@@ -4,6 +4,8 @@
 <dict>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>need autorisation to save the image into your library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>need autorisation to pick up a photo inton your library</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
