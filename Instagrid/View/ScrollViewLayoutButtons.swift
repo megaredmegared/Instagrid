@@ -2,7 +2,6 @@
  import UIKit
  
  /// buttons for selecting a layout and the layout background color
- 
  class ScrollViewLayoutButtons: UIScrollView {
     
     @IBOutlet weak var colorPickerButton: UIButton!
@@ -16,7 +15,6 @@
     @IBOutlet weak var onePhotoButton: UIButton!
     
     /// slider could work even if we are touching a button
-    
     override func touchesShouldCancel(in view: UIView) -> Bool {
         if view is UIControl
             && !(view is UITextInput)
@@ -28,7 +26,6 @@
     }
     
     /// sync photo layout and the corresponding button
-    
     func setLayoutButton(view: PhotosView, layout: Layout) {
         
         view.layout = layout

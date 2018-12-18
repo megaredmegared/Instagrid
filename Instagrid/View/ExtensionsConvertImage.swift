@@ -1,17 +1,9 @@
-//
-//  File.swift
-//  Instagrid
-//
-//  Created by megared on 07/12/2018.
-//  Copyright © 2018 OpenClassrooms. All rights reserved.
-//
 
 import UIKit
 
 extension UIImage {
     
     /// resize image in relation to his smallest side
-    
     class func resizeImage(image: UIImage, newMinSideSize: CGFloat) -> UIImage {
         
         if image.size.height < image.size.width {

@@ -2,7 +2,6 @@
 import UIKit
 
 /// Settings for the layouts of photos
-
 class PhotosView: UIView {
     
     @IBOutlet var buttonTopLeft: PhotoButton!
@@ -20,9 +19,7 @@ class PhotosView: UIView {
     }
     
     // MARK: - Shadow under the frame of the photo layout
-    
     /// Shadow under the frame of the photo layout
-    
     override func layoutSubviews() {
         super.layoutSubviews()
         super.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -33,9 +30,7 @@ class PhotosView: UIView {
     }
     
     // MARK: - Layouts settings
-    
     /// Layouts settings
-    
     private func setLayout(_ layout: Layout) {
         switch layout {
         case .twoPhotosTop :

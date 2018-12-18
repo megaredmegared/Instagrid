@@ -101,6 +101,11 @@ to share</string>
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                                                                         <color key="backgroundColor" red="0.9410743117" green="0.94123536350000003" blue="0.94106405969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <state key="normal" image="plusSign"/>
+                                                                                                        <userDefinedRuntimeAttributes>
+                                                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                                                <real key="value" value="6"/>
+                                                                                                            </userDefinedRuntimeAttribute>
+                                                                                                        </userDefinedRuntimeAttributes>
                                                                                                         <connections>
                                                                                                             <action selector="didTapLoadTopLeftPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnc-H8-0Rj"/>
                                                                                                         </connections>
@@ -419,7 +424,7 @@ to share</string>
                                                                 <rect key="frame" x="1" y="0.0" width="301" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
-                                                                    <action selector="redSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="vvr-2Y-gJo"/>
+                                                                    <action selector="didTapRedSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="eKt-NA-Z0g"/>
                                                                 </connections>
                                                             </slider>
                                                         </subviews>
@@ -437,7 +442,7 @@ to share</string>
                                                                 <rect key="frame" x="1" y="0.0" width="301" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
-                                                                    <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Q2-fF-4fD"/>
+                                                                    <action selector="didTapGreenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="pt7-gb-DIL"/>
                                                                 </connections>
                                                             </slider>
                                                         </subviews>
@@ -455,7 +460,7 @@ to share</string>
                                                                 <rect key="frame" x="1" y="0.0" width="301" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
-                                                                    <action selector="blueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="whK-uX-7Jq"/>
+                                                                    <action selector="didTapBlueSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="MRw-SC-ucN"/>
                                                                 </connections>
                                                             </slider>
                                                         </subviews>
@@ -467,14 +472,14 @@ to share</string>
                                                                 <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
                                                                 <state key="normal" title="reset"/>
                                                                 <connections>
-                                                                    <action selector="resetColors" destination="BYZ-38-t0r" eventType="touchUpInside" id="XzK-a2-Z2a"/>
+                                                                    <action selector="didTapResetColors" destination="BYZ-38-t0r" eventType="touchUpInside" id="U7q-8l-GhD"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGJ-jH-uaM">
                                                                 <rect key="frame" x="150" y="0.0" width="150" height="30"/>
                                                                 <state key="normal" title="close"/>
                                                                 <connections>
-                                                                    <action selector="closeColorSliders" destination="BYZ-38-t0r" eventType="touchUpInside" id="SbS-hk-a7A"/>
+                                                                    <action selector="didTapCloseColorSliders" destination="BYZ-38-t0r" eventType="touchUpInside" id="nzh-Mr-meN"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
