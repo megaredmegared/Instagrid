@@ -11,20 +11,8 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
  
     @IBOutlet weak var photosView: PhotosView!
- 
-    @IBOutlet weak var onePhotosButton: UIButton!
-
-    @IBOutlet weak var colorPickerButton: UIButton!
-    @IBOutlet weak var colorSliders: UIView!
-    @IBOutlet weak var redSlider: UISlider!
-    @IBOutlet weak var greenSlider: UISlider!
-    @IBOutlet weak var blueSlider: UISlider!
-
+    @IBOutlet weak var colorPickerSlider: ColorPickerSlider!
     @IBOutlet weak var scrollViewLayoutButtons: ScrollViewLayoutButtons!
-    
-    /// Color picker instance
-    
-    let colorPicker = ColorPicker()
     
     /// image size for imported and shared images
     
@@ -152,38 +140,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     /// sliders for RGB values
     
     @IBAction func redSlider(_ sender: UISlider) {
-        colorPicker.red = CGFloat(sender.value) / 255
-        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
+        colorPickerSlider.red = CGFloat(sender.value) / 255
+        colorPickerSlider.setBackgroundColor(view: photosView, button: scrollViewLayoutButtons.colorPickerButton)
     }
     @IBAction func greenSlider(_ sender: UISlider) {
-        colorPicker.green = CGFloat(sender.value) / 255
-        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
+        colorPickerSlider.green = CGFloat(sender.value) / 255
+        colorPickerSlider.setBackgroundColor(view: photosView, button: scrollViewLayoutButtons.colorPickerButton)
         
     }
     @IBAction func blueSlider(_ sender: UISlider) {
-        colorPicker.blue = CGFloat(sender.value) / 255
-        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
+        colorPickerSlider.blue = CGFloat(sender.value) / 255
+        colorPickerSlider.setBackgroundColor(view: photosView, button: scrollViewLayoutButtons.colorPickerButton)
     }
     
     /// Reset color sliders and background color to there initial values
     
     @IBAction func resetColors() {
-        colorPicker.resetBackgroundColor(view: photosView, button: colorPickerButton)
-        redSlider.value = Float(colorPicker.redDefault * 255)
-        greenSlider.value = Float(colorPicker.greenDefault * 255)
-        blueSlider.value = Float(colorPicker.blueDefault * 255)
+        colorPickerSlider.resetBackgroundColor(view: photosView, button: scrollViewLayoutButtons.colorPickerButton)
+        colorPickerSlider.redSlider.value = Float(colorPickerSlider.redDefault * 255)
+        colorPickerSlider.greenSlider.value = Float(colorPickerSlider.greenDefault * 255)
+        colorPickerSlider.blueSlider.value = Float(colorPickerSlider.blueDefault * 255)
     }
     
     /// Close color sliders
     
     @IBAction func closeColorSliders() {
-        colorSliders.isHidden = true
+        colorPickerSlider.isHidden = true
     }
     
     /// show color sliders
     
     @IBAction func didTapColorPickerButton() {
-        colorSliders.isHidden = false
+        colorPickerSlider.isHidden = false
     }
     
     // MARK: - DRAG photosView TO SHARE THE PHOTOS OR TRASH THEM ------
@@ -248,7 +236,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             } else if translation.y < slideLenght || translation.y > -slideLenght {
                 actionOnPhotos = .inPlace
             }
-            
         }
     }
   
@@ -386,7 +373,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     private func startInstagrid() {
         scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotosTop)
-        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
+        colorPickerSlider.setBackgroundColor(view: photosView, button: scrollViewLayoutButtons.colorPickerButton)
         layoutButtonsZPosition()
     }
 }

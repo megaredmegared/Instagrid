@@ -379,6 +379,7 @@ to share</string>
                                                             </mask>
                                                         </variation>
                                                         <connections>
+                                                            <outlet property="colorPickerButton" destination="hBS-Jp-NcV" id="QD5-P0-UdL"/>
                                                             <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="CRX-da-azE"/>
                                                             <outlet property="onePhotoButton" destination="UNq-Gi-Ah6" id="Uo1-ny-Plu"/>
                                                             <outlet property="twoPhotosBottomButton" destination="G65-KZ-B5c" id="Hlf-gy-g2i"/>
@@ -396,7 +397,7 @@ to share</string>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQH-OE-3Dj">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQH-OE-3Dj" customClass="ColorPickerSlider" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="419" width="320" height="149"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YhW-PL-rH6">
@@ -436,7 +437,7 @@ to share</string>
                                                                 <rect key="frame" x="1" y="0.0" width="301" height="31"/>
                                                                 <color key="tintColor" red="0.015775226060000001" green="0.39592924709999999" blue="0.60368543860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <connections>
-                                                                    <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="c4g-eI-s71"/>
+                                                                    <action selector="greenSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Q2-fF-4fD"/>
                                                                 </connections>
                                                             </slider>
                                                         </subviews>
@@ -491,6 +492,11 @@ to share</string>
                                     <constraint firstItem="HCJ-jK-6yr" firstAttribute="bottom" secondItem="YhW-PL-rH6" secondAttribute="bottom" constant="10" id="smP-vl-BZp"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="HCJ-jK-6yr"/>
+                                <connections>
+                                    <outlet property="blueSlider" destination="J9Z-md-dip" id="GEp-oV-cFR"/>
+                                    <outlet property="greenSlider" destination="A7L-X3-yNs" id="rH7-NB-WUB"/>
+                                    <outlet property="redSlider" destination="Py4-MY-XHX" id="o5K-oi-HhV"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.71360510590000004" green="0.84258151049999996" blue="0.90132403370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -506,13 +512,8 @@ to share</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="blueSlider" destination="J9Z-md-dip" id="6ZX-Mc-3ro"/>
-                        <outlet property="colorPickerButton" destination="hBS-Jp-NcV" id="w2w-ob-H75"/>
-                        <outlet property="colorSliders" destination="kQH-OE-3Dj" id="1hh-aM-cC8"/>
-                        <outlet property="greenSlider" destination="A7L-X3-yNs" id="JUa-nc-cft"/>
-                        <outlet property="onePhotosButton" destination="hBS-Jp-NcV" id="oOa-bX-ZrR"/>
+                        <outlet property="colorPickerSlider" destination="kQH-OE-3Dj" id="6go-df-AUx"/>
                         <outlet property="photosView" destination="Nht-vk-aPT" id="HJn-ru-w9Y"/>
-                        <outlet property="redSlider" destination="Py4-MY-XHX" id="XbZ-b0-Zhk"/>
                         <outlet property="scrollViewLayoutButtons" destination="8Ug-sM-8gG" id="zgt-8G-XlV"/>
                     </connections>
                 </viewController>

@@ -1,10 +1,11 @@
  
  import UIKit
  
- /// Mark layoutButton has actived with a checkmark image
+ /// buttons for selecting a layout and the layout background color
  
  class ScrollViewLayoutButtons: UIScrollView {
     
+    @IBOutlet weak var colorPickerButton: UIButton!
     @IBOutlet weak var twoPhotosTopButton: UIButton!
     @IBOutlet weak var twoPhotosBottomButton: UIButton!
     @IBOutlet weak var fourPhotosButton: UIButton!
