@@ -10,18 +10,6 @@ import UIKit
 
 extension UIImage {
     
-    
-    // TODO: Check if still needed
-    /// resize UIView
-    
-//    convenience init(view: UIView) {
-//        UIGraphicsBeginImageContext(view.frame.size)
-//        view.layer.render(in:UIGraphicsGetCurrentContext()!)
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        self.init(cgImage: image!.cgImage!)
-//    }
-//    
     /// resize image in relation to his smallest side
     
     class func resizeImage(image: UIImage, newMinSideSize: CGFloat) -> UIImage {

@@ -9,10 +9,15 @@ class PhotosView: UIView {
     @IBOutlet var buttonTopRight: PhotoButton!
     @IBOutlet var buttonBottomLeft: PhotoButton!
     @IBOutlet var buttonBottomRight: PhotoButton!
-    
     @IBOutlet private var maintStackView: UIStackView!
     @IBOutlet private var firstSubStackView: UIStackView!
     @IBOutlet private var secondSubStackView: UIStackView!
+    
+    var layout: Layout = .twoPhotosTop {
+        didSet {
+            setLayout(layout)
+        }
+    }
     
     // MARK: - Shadow under the frame of the photo layout
     
@@ -25,13 +30,6 @@ class PhotosView: UIView {
         super.layer.shadowOffset = CGSize(width: 0, height: 2)
         super.layer.shadowRadius = 4
         super.layer.zPosition = 1
-    }
-    
-    
-    var layout: Layout = .twoPhotosTop {
-        didSet {
-            setLayout(layout)
-        }
     }
     
     // MARK: - Layouts settings

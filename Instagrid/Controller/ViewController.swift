@@ -19,12 +19,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var twoPhotosLeftButton: UIButton!
     @IBOutlet weak var twoPhotosRightButton: UIButton!
     @IBOutlet weak var onePhotosButton: UIButton!
-    @IBOutlet weak var colorSliders: UIView!
+
     @IBOutlet weak var colorPickerButton: UIButton!
+    @IBOutlet weak var colorSliders: UIView!
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
+
+    
+    
     @IBOutlet weak var layoutButtons: ControlContainableScrollView!
+    
+    /// Color picker instance
+    
+    var colorPicker = ColorPicker()
     
     /// image size for imported and shared images
     
@@ -214,43 +222,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - SET THE BACKGROUND COLOR WITH SLIDERS ------
     
-    /// set and sync the background color RGB values with the sliders values
-    
-    private func setBackgroundColor() {
-        photosView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-        colorPickerButton.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: alpha)
-    }
-    
     /// sliders for RGB values
     
     @IBAction func redSlider(_ sender: UISlider) {
-        red = CGFloat(sender.value) / 255
-        setBackgroundColor()
+        colorPicker.red = CGFloat(sender.value) / 255
+        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
     }
     @IBAction func greenSlider(_ sender: UISlider) {
-        green = CGFloat(sender.value) / 255
-        setBackgroundColor()
+        colorPicker.green = CGFloat(sender.value) / 255
+        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
         
     }
     @IBAction func blueSlider(_ sender: UISlider) {
-        blue = CGFloat(sender.value) / 255
-        setBackgroundColor()
-    }
-    
-    /// reset layout background color to default values
-    
-    private func resetBackgroundColor() {
-        photosView.backgroundColor = UIColor(red: redDefault, green: greenDefault, blue: blueDefault, alpha: aplhaDefault)
-        colorPickerButton.backgroundColor = UIColor(red: redDefault, green: greenDefault, blue: blueDefault, alpha: aplhaDefault)
+        colorPicker.blue = CGFloat(sender.value) / 255
+        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
     }
     
     /// Reset color sliders and background color to there initial values
     
     @IBAction func resetColors() {
-        resetBackgroundColor()
-        redSlider.value = Float(redDefault * 255)
-        greenSlider.value = Float(greenDefault * 255)
-        blueSlider.value = Float(blueDefault * 255)
+        colorPicker.resetBackgroundColor(view: photosView, button: colorPickerButton)
+        redSlider.value = Float(colorPicker.redDefault * 255)
+        greenSlider.value = Float(colorPicker.greenDefault * 255)
+        blueSlider.value = Float(colorPicker.blueDefault * 255)
     }
     
     /// Close color sliders
@@ -331,7 +325,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
   
-    /// transform a view in image with a specific scale
+    /// transform a view in image with a specific width
     
     func image(with view: UIView, scaledWidthTo width: CGFloat) -> UIImage? {
         let scale = width / view.bounds.width
@@ -352,13 +346,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         /// check that the layout is full of photo
         if (photosView.buttonTopLeft.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonTopLeft.isHidden == true) && (photosView.buttonTopRight.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonTopRight.isHidden == true) && (photosView.buttonBottomLeft.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonBottomLeft.isHidden == true) && (photosView.buttonBottomRight.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonBottomRight.isHidden == true) {
             
-            // construct the image to share
-      
-            let imageToShare: UIImage = self.image(with: photosView, scaledWidthTo: imageSizeImportedOrShared)!
-            
-            /// share the image
-            let activityVC = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
-            self.present(activityVC, animated: true, completion: nil)
+            if self.image(with: photosView, scaledWidthTo: imageSizeImportedOrShared) != nil {
+                // construct the image to share
+                let imageToShare = self.image(with: photosView, scaledWidthTo: imageSizeImportedOrShared)!
+                /// share the image
+                let activityVC = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
+                self.present(activityVC, animated: true, completion: nil)
+            }
             
         } else {
             /// alert if photos are missing
@@ -465,7 +459,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     private func startInstagrid() {
         activeViewButton(is: .twoPhotosTop)
-        setBackgroundColor()
+        colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
         layoutButtonsZPosition()
     }
 }
