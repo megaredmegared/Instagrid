@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// color picker to set color of photoView background and colorpicker button color
+
 class ColorPicker {
 
     /// Default values for the layout background color
@@ -17,7 +19,7 @@ class ColorPicker {
     let blueDefault: CGFloat = 154 / 255
     let aplhaDefault: CGFloat = 1
     
-    // starting values for the layout background color
+    /// starting values for the layout background color
     
     lazy var red: CGFloat = redDefault
     lazy var green: CGFloat = greenDefault

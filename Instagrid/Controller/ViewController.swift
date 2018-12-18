@@ -9,15 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
+ 
     @IBOutlet weak var photosView: PhotosView!
-    @IBOutlet weak var twoPhotosTopButton: UIButton!
-    @IBOutlet weak var fourPhotosButton: UIButton!
-    @IBOutlet weak var twoPhotosBottomButton: UIButton!
-    @IBOutlet weak var twoPhotosButton: UIButton!
-    @IBOutlet weak var twoPhotosVerticalButton: UIButton!
-    @IBOutlet weak var twoPhotosLeftButton: UIButton!
-    @IBOutlet weak var twoPhotosRightButton: UIButton!
+ 
     @IBOutlet weak var onePhotosButton: UIButton!
 
     @IBOutlet weak var colorPickerButton: UIButton!
@@ -26,13 +20,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
 
-    
-    
-    @IBOutlet weak var layoutButtons: ControlContainableScrollView!
+    @IBOutlet weak var scrollViewLayoutButtons: ScrollViewLayoutButtons!
     
     /// Color picker instance
     
-    var colorPicker = ColorPicker()
+    let colorPicker = ColorPicker()
     
     /// image size for imported and shared images
     
@@ -45,20 +37,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     /// Picked image from the photo library
     
     private let imagePicker = UIImagePickerController()
-    
-    /// Default values for the layout background color
-    
-    let redDefault: CGFloat = 4 / 255
-    let greenDefault: CGFloat = 101 / 255
-    let blueDefault: CGFloat = 154 / 255
-    let aplhaDefault: CGFloat = 1
-    
-    // starting values for the layout background color
-    
-    lazy var red: CGFloat = redDefault
-    lazy var green: CGFloat = greenDefault
-    lazy var blue: CGFloat = blueDefault
-    lazy var alpha: CGFloat = aplhaDefault
     
     /// asked action on photo layout
     
@@ -82,24 +60,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         let cornerRadius: CGFloat = 6
         
-        switch photoButtonTapped {
-        case .topLeftButton :
-            photosView.buttonTopLeft.setImage(imageResized, for: .normal)
-            photosView.buttonTopLeft.imageView?.contentMode = .scaleAspectFill
-            photosView.buttonTopLeft.imageView?.layer.cornerRadius = cornerRadius
-        case .topRightButton :
-            photosView.buttonTopRight.setImage(imageResized, for: .normal)
-            photosView.buttonTopRight.imageView?.contentMode = .scaleAspectFill
-            photosView.buttonTopRight.imageView?.layer.cornerRadius = cornerRadius
-        case .bottomLeftButton :
-            photosView.buttonBottomLeft.setImage(imageResized, for: .normal)
-            photosView.buttonBottomLeft.imageView?.contentMode = .scaleAspectFill
-            photosView.buttonBottomLeft.imageView?.layer.cornerRadius = cornerRadius
-        case .bottomRightButton :
-            photosView.buttonBottomRight.setImage(imageResized, for: .normal)
-            photosView.buttonBottomRight.imageView?.contentMode = .scaleAspectFill
-            photosView.buttonBottomRight.imageView?.layer.cornerRadius = cornerRadius
+        var button: UIButton {
+            switch photoButtonTapped {
+            case .topLeftButton :
+                return photosView.buttonTopLeft
+            case .topRightButton :
+                return photosView.buttonTopRight
+            case .bottomLeftButton :
+                return photosView.buttonBottomLeft
+            case .bottomRightButton :
+                return photosView.buttonBottomRight
+            }
         }
+        button.setImage(imageResized, for: .normal)
+        button.imageView?.contentMode = .scaleAspectFill
+        button.imageView?.layer.cornerRadius = cornerRadius
     }
     
     /// Pick an image from the photo library
@@ -145,79 +120,31 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - ASSIGN CHECKMARK TO THE CORRESPONDING ACTIVE LAYOUT ------
     
-    /// Mark layoutButton has actived with a checkmark image
-    
-    private func activeViewButton(is layout: Layout) {
-        
-        photosView.layout = layout
-        
-        var button: UIButton
-        
-        switch layout {
-        case .twoPhotosTop :
-            button = twoPhotosTopButton
-            
-        case .twoPhotosBottom :
-            button = twoPhotosBottomButton
-            
-        case .fourPhotos :
-            button = fourPhotosButton
-            
-        case .twoPhotosVertical :
-            button = twoPhotosVerticalButton
-            
-        case .twoPhotoLeft :
-            button = twoPhotosLeftButton
-            
-        case .twoPhotoRight :
-            button = twoPhotosRightButton
-            
-        case .onePhoto :
-            button = onePhotosButton
-            
-        case .twoPhotos :
-            button = twoPhotosButton
-        }
-        
-        let buttons = [twoPhotosTopButton, twoPhotosBottomButton, fourPhotosButton, twoPhotosButton, twoPhotosVerticalButton, twoPhotosLeftButton, twoPhotosRightButton, onePhotosButton]
-        
-        /// reset all buttons checkmark image
-        for i in buttons {
-            if i != nil {
-                i?.setImage(nil, for: .normal)
-            }
-        }
-        
-        /// set the button selected with a checkmark
-        button.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
-        button.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
-    }
-    
     /// layout buttons tapped
     
     @IBAction func didTapTwoPhotosTopButton() {
-        activeViewButton(is: .twoPhotosTop)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotosTop)
     }
     @IBAction func didTapTwoPhotosBottomButton() {
-        activeViewButton(is: .twoPhotosBottom)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotosBottom)
     }
     @IBAction func didTapFourPhotosButton() {
-        activeViewButton(is: .fourPhotos)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .fourPhotos)
     }
     @IBAction func didTapTwoPhotosButton() {
-        activeViewButton(is: .twoPhotos)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotos)
     }
     @IBAction func didTapTwoPhotosVerticalButton() {
-        activeViewButton(is: .twoPhotosVertical)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotosVertical)
     }
     @IBAction func didTapTwoPhotosLeftButton() {
-        activeViewButton(is: .twoPhotoLeft)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotoLeft)
     }
     @IBAction func didTapTwoPhotosRightButton() {
-        activeViewButton(is: .twoPhotoRight)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotoRight)
     }
     @IBAction func didTapOnePhotoButton() {
-        activeViewButton(is: .onePhoto)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .onePhoto)
     }
     
     // MARK: - SET THE BACKGROUND COLOR WITH SLIDERS ------
@@ -264,7 +191,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     /// set the layout buttons on the back to make the photosView pass over them
     
     private func layoutButtonsZPosition() {
-        layoutButtons.layer.zPosition = -1
+        scrollViewLayoutButtons.layer.zPosition = -1
     }
     
     /// drag photo view and share or trash them
@@ -458,7 +385,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - START THE APP ------
     
     private func startInstagrid() {
-        activeViewButton(is: .twoPhotosTop)
+        scrollViewLayoutButtons.setLayoutButton(view: photosView, layout: .twoPhotosTop)
         colorPicker.setBackgroundColor(view: photosView, button: colorPickerButton)
         layoutButtonsZPosition()
     }

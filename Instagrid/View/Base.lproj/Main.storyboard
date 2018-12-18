@@ -243,7 +243,7 @@ to share</string>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0S7-OA-rkH">
                                                 <rect key="frame" x="0.0" y="424" width="300" height="65"/>
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-sM-8gG" customClass="ControlContainableScrollView" customModule="Instagrid" customModuleProvider="target">
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ug-sM-8gG" customClass="ScrollViewLayoutButtons" customModule="Instagrid" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="300" height="65"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-N0-HSf">
@@ -378,6 +378,16 @@ to share</string>
                                                                 <include reference="t4b-zt-vby"/>
                                                             </mask>
                                                         </variation>
+                                                        <connections>
+                                                            <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="CRX-da-azE"/>
+                                                            <outlet property="onePhotoButton" destination="UNq-Gi-Ah6" id="Uo1-ny-Plu"/>
+                                                            <outlet property="twoPhotosBottomButton" destination="G65-KZ-B5c" id="Hlf-gy-g2i"/>
+                                                            <outlet property="twoPhotosButton" destination="EM9-97-rxT" id="Tzv-hN-8hx"/>
+                                                            <outlet property="twoPhotosLeftButton" destination="vTq-EO-rqv" id="cZK-2f-lug"/>
+                                                            <outlet property="twoPhotosRightButton" destination="GMH-GL-hGQ" id="frd-M9-PVA"/>
+                                                            <outlet property="twoPhotosTopButton" destination="Kb3-qf-thL" id="hef-9H-wE5"/>
+                                                            <outlet property="twoPhotosVerticalButton" destination="TbP-cq-98u" id="cRL-Nx-3wc"/>
+                                                        </connections>
                                                     </scrollView>
                                                 </subviews>
                                             </stackView>
@@ -499,18 +509,11 @@ to share</string>
                         <outlet property="blueSlider" destination="J9Z-md-dip" id="6ZX-Mc-3ro"/>
                         <outlet property="colorPickerButton" destination="hBS-Jp-NcV" id="w2w-ob-H75"/>
                         <outlet property="colorSliders" destination="kQH-OE-3Dj" id="1hh-aM-cC8"/>
-                        <outlet property="fourPhotosButton" destination="zJr-Mn-GOv" id="YyS-Lp-UTN"/>
                         <outlet property="greenSlider" destination="A7L-X3-yNs" id="JUa-nc-cft"/>
-                        <outlet property="layoutButtons" destination="8Ug-sM-8gG" id="IT2-No-fMv"/>
                         <outlet property="onePhotosButton" destination="hBS-Jp-NcV" id="oOa-bX-ZrR"/>
                         <outlet property="photosView" destination="Nht-vk-aPT" id="HJn-ru-w9Y"/>
                         <outlet property="redSlider" destination="Py4-MY-XHX" id="XbZ-b0-Zhk"/>
-                        <outlet property="twoPhotosBottomButton" destination="G65-KZ-B5c" id="QTX-bm-Aaq"/>
-                        <outlet property="twoPhotosButton" destination="EM9-97-rxT" id="WPS-UP-6cA"/>
-                        <outlet property="twoPhotosLeftButton" destination="vTq-EO-rqv" id="48W-fu-Lhj"/>
-                        <outlet property="twoPhotosRightButton" destination="GMH-GL-hGQ" id="yF6-Py-aT3"/>
-                        <outlet property="twoPhotosTopButton" destination="Kb3-qf-thL" id="Esc-3m-0h0"/>
-                        <outlet property="twoPhotosVerticalButton" destination="TbP-cq-98u" id="L8C-JL-28b"/>
+                        <outlet property="scrollViewLayoutButtons" destination="8Ug-sM-8gG" id="zgt-8G-XlV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

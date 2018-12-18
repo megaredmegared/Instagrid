@@ -22,6 +22,7 @@
 		4DC95F2221B02E37001DFD3B /* PhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC95F2121B02E37001DFD3B /* PhotosView.swift */; };
 		4DCB55AD21BD522800B8A045 /* ActionOnPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCB55AC21BD522800B8A045 /* ActionOnPhotos.swift */; };
 		4DF9120D21C8DF0800013001 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9120C21C8DF0800013001 /* ColorPicker.swift */; };
+		4DF9120F21C8F55900013001 /* ScrollViewLayoutButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF9120E21C8F55900013001 /* ScrollViewLayoutButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4DC95F2121B02E37001DFD3B /* PhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosView.swift; sourceTree = "<group>"; };
 		4DCB55AC21BD522800B8A045 /* ActionOnPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnPhotos.swift; sourceTree = "<group>"; };
 		4DF9120C21C8DF0800013001 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		4DF9120E21C8F55900013001 /* ScrollViewLayoutButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewLayoutButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				4D33B62221A5650300FD41A6 /* Main.storyboard */,
 				4D6F733E21B14532000248F5 /* PhotoButton.swift */,
+				4DF9120E21C8F55900013001 /* ScrollViewLayoutButtons.swift */,
 				4DF9120C21C8DF0800013001 /* ColorPicker.swift */,
 				4D67B12121B6CE66000F34EE /* ControlContainableScrollView.swift */,
 				4DC95F2121B02E37001DFD3B /* PhotosView.swift */,
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF9120F21C8F55900013001 /* ScrollViewLayoutButtons.swift in Sources */,
 				4D33B62121A5650300FD41A6 /* ViewController.swift in Sources */,
 				4DC95F2221B02E37001DFD3B /* PhotosView.swift in Sources */,
 				4D8C86CE21BABCBA001A20FF /* Layout.swift in Sources */,
