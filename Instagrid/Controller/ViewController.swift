@@ -25,6 +25,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     /// asked action on photo layout
     private var actionOnPhotos: ActionOnPhotos = .inPlace
     
+    /// image of the layout to export
+    let exportImage = ExportImage()
+    
     // MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -208,28 +211,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
-    
-    /// transform a view in image with a specific width
-    func image(with view: UIView, scaledWidthTo width: CGFloat) -> UIImage? {
-        let scale = width / view.bounds.width
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, scale)
-        defer { UIGraphicsEndImageContext() }
-        if let context = UIGraphicsGetCurrentContext() {
-            view.layer.render(in: context)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            return image
-        }
-        return nil
-    }
-    
+
     /// sharing photo service
     private func sharePhoto() {
         /// check that the layout is full of photo
         if (photosView.buttonTopLeft.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonTopLeft.isHidden == true) && (photosView.buttonTopRight.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonTopRight.isHidden == true) && (photosView.buttonBottomLeft.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonBottomLeft.isHidden == true) && (photosView.buttonBottomRight.currentImage != UIImage(imageLiteralResourceName: "plusSign") || photosView.buttonBottomRight.isHidden == true) {
             
-            if self.image(with: photosView, scaledWidthTo: imageSizeImportedOrShared) != nil {
+            if exportImage.image(with: photosView, scaledWidthTo: imageSizeImportedOrShared) != nil {
                 // construct the image to share
-                let imageToShare = self.image(with: photosView, scaledWidthTo: imageSizeImportedOrShared)!
+                let imageToShare = exportImage.image(with: photosView, scaledWidthTo: imageSizeImportedOrShared)!
                 /// share the image
                 let activityVC = UIActivityViewController(activityItems: [imageToShare], applicationActivities: nil)
                 self.present(activityVC, animated: true, completion: nil)
