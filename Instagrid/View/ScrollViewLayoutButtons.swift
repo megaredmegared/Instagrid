@@ -28,39 +28,23 @@
     /// sync photo layout and the corresponding button
     func setLayoutButton(view: PhotosView, layout: Layout) {
         
-        view.layout = layout
-        
-        let layoutButtons: [UIButton] = [twoPhotosTopButton, twoPhotosBottomButton, fourPhotosButton, twoPhotosButton, twoPhotosVerticalButton, twoPhotosLeftButton, twoPhotosRightButton, onePhotoButton]
-        
-        var button: UIButton {
-            switch layout {
-            case .twoPhotosTop :
-                return layoutButtons[0]
-            case .twoPhotosBottom :
-                return layoutButtons[1]
-            case .fourPhotos :
-                return layoutButtons[2]
-            case .twoPhotos :
-                return layoutButtons[3]
-            case .twoPhotosVertical :
-                return layoutButtons[4]
-            case .twoPhotoLeft :
-                return layoutButtons[5]
-            case .twoPhotoRight :
-                return layoutButtons[6]
-            case .onePhoto :
-                return layoutButtons[7]
-            }
+         view.layout = layout
+
+        let layoutButtons: [Layout: UIButton] = [.twoPhotosTop: twoPhotosTopButton, .twoPhotosBottom: twoPhotosBottomButton, .fourPhotos: fourPhotosButton, .twoPhotos: twoPhotosButton, .twoPhotosVertical: twoPhotosVerticalButton, .twoPhotoLeft: twoPhotosLeftButton, .twoPhotoRight: twoPhotosRightButton, .onePhoto: onePhotoButton]
+
+        var button: UIButton = layoutButtons[.twoPhotoLeft]!
+
+        if layoutButtons[layout] != nil {
+            button = layoutButtons[layout]!
         }
-        
+
         /// reset all buttons checkmark image
-        for i in layoutButtons {
+        for i in layoutButtons.values {
             i.setImage(nil, for: .normal)
         }
-        
+
         /// set the button selected with a checkmark
         button.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
         button.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
     }
-    
  }

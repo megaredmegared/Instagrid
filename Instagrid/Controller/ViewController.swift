@@ -28,7 +28,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     /// image of the layout to export
     let exportImage = ExportImage()
     
-    // MARK: - VIEWDIDLOAD
+    // MARK: - VIEWCONTROLLER LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         startInstagrid()

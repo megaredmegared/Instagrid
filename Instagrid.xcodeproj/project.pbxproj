@@ -94,7 +94,6 @@
 				4DCB55AC21BD522800B8A045 /* ActionOnPhotos.swift */,
 				4D8C86CF21BABD6A001A20FF /* PhotoButtonTapped.swift */,
 				4DE7B7A821CAFA3C00A5766E /* Share.swift */,
-				4DD1D2F621CB00DA00FDFD3F /* ExportImage.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -102,6 +101,7 @@
 		4D83C65C21A5927000865E6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DD1D2F621CB00DA00FDFD3F /* ExportImage.swift */,
 				4D33B62221A5650300FD41A6 /* Main.storyboard */,
 				4D6F733E21B14532000248F5 /* PhotoButton.swift */,
 				4DF9120E21C8F55900013001 /* ScrollViewLayoutButtons.swift */,
