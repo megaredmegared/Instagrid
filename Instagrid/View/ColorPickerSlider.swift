@@ -14,7 +14,7 @@ class ColorPickerSlider: UIView {
     let blueDefault: CGFloat = 154 / 255
     let aplhaDefault: CGFloat = 1
     
-    /// starting values for the layout background color
+    /// Changing values for the layout background color
     lazy var red: CGFloat = redDefault
     lazy var green: CGFloat = greenDefault
     lazy var blue: CGFloat = blueDefault

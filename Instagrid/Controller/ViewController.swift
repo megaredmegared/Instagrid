@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private var actionOnPhotos: ActionOnPhotos = .inPlace
     
     /// image of the layout to export
-    let exportImage = ExportImage()
+    private let exportImage = ExportImage()
     
     // MARK: - VIEWCONTROLLER LIFE CYCLE
     override func viewDidLoad() {
@@ -67,7 +67,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true)
     }
     
-    // TODO: Understand this function why no more use of authorization message
+    /// Controller of the image picker
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             selectPhotoButton(photoButtonTapped, image: image)

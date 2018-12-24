@@ -3,7 +3,7 @@
  
  /// buttons for selecting a layout and the layout background color
  class ScrollViewLayoutButtons: UIScrollView {
-    // TODO: color picker in the right place ?
+    
     @IBOutlet weak var colorPickerButton: UIButton!
     @IBOutlet weak var twoPhotosTopButton: UIButton!
     @IBOutlet weak var twoPhotosBottomButton: UIButton!
@@ -38,7 +38,7 @@
             button = layoutButtons[layout]!
         }
         
-        /// reset all buttons checkmark image
+        /// reset all buttons checkmarks images
         for i in layoutButtons.values {
             i.setImage(nil, for: .normal)
         }

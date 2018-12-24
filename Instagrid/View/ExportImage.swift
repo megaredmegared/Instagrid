@@ -1,9 +1,9 @@
 
 import UIKit
 
+/// transform a view in image with a specific width
 class ExportImage {
     
-    /// transform a view in image with a specific width
     func image(with view: UIView, scaledWidthTo width: CGFloat) -> UIImage? {
         let scale = width / view.bounds.width
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, scale)
@@ -15,5 +15,4 @@ class ExportImage {
         }
         return nil
     }
-
 }

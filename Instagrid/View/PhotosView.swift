@@ -12,6 +12,7 @@ class PhotosView: UIView {
     @IBOutlet private var firstSubStackView: UIStackView!
     @IBOutlet private var secondSubStackView: UIStackView!
     
+    /// layout to choose
     var layout: Layout = .twoPhotosTop {
         didSet {
             setLayout(layout)
@@ -19,7 +20,6 @@ class PhotosView: UIView {
     }
     
     // MARK: - Shadow under the frame of the photo layout
-    /// Shadow under the frame of the photo layout
     override func layoutSubviews() {
         super.layoutSubviews()
         super.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
