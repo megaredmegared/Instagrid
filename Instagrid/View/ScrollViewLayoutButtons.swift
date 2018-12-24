@@ -28,21 +28,21 @@
     /// sync photo layout and the corresponding button
     func setLayoutButton(view: PhotosView, layout: Layout) {
         
-         view.layout = layout
-
+        view.layout = layout
+        
         let layoutButtons: [Layout: UIButton] = [.twoPhotosTop: twoPhotosTopButton, .twoPhotosBottom: twoPhotosBottomButton, .fourPhotos: fourPhotosButton, .twoPhotos: twoPhotosButton, .twoPhotosVertical: twoPhotosVerticalButton, .twoPhotoLeft: twoPhotosLeftButton, .twoPhotoRight: twoPhotosRightButton, .onePhoto: onePhotoButton]
-
+        
         var button: UIButton = layoutButtons[.twoPhotoLeft]!
-
+        
         if layoutButtons[layout] != nil {
             button = layoutButtons[layout]!
         }
-
+        
         /// reset all buttons checkmark image
         for i in layoutButtons.values {
             i.setImage(nil, for: .normal)
         }
-
+        
         /// set the button selected with a checkmark
         button.setImage(#imageLiteral(resourceName: "photo check"), for: .highlighted)
         button.setImage(#imageLiteral(resourceName: "photo check"), for: .normal)
